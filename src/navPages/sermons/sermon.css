@@ -1,0 +1,46 @@
+.ser-hold {
+  display: flex;
+  padding-left: 40px;
+  align-items: center;
+  height: 100vh;
+}
+
+.ser-cont {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sermon-quote {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sermon-quote > img {
+  width: 330px;
+  height: 200px;
+}
+
+.sermon-quote > h3 {
+  font-size: 1.5rem;
+  color: #666;
+}
+.sermon-quote > p {
+  font-size: 1rem;
+  color: #666;
+}
+.sermon-quote .calc {
+  margin-right: 5px;
+  font-size: 0.9rem;
+}
+.sermon-quote p > span {
+  color: #000;
+  text-decoration: 1px underline;
+}
+/* For the mobile View */
+@media screen and (max-width: 576px) {
+  .ser-hold {
+    padding-left: 20px;
+  }
+}

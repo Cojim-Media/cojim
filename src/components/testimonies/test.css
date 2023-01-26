@@ -1,0 +1,80 @@
+.test-cont {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+  height: 300px;
+}
+.test {
+  background-image: url('../../img/test.jpg');
+}
+.pray {
+  background-image: url('../../img/pray.jpg');
+}
+.sermon {
+  background-image: url('../../img/sermon.jpg');
+}
+.test,
+.pray,
+.sermon {
+  width: 300px;
+  height: 200px;
+  border: 8px solid #f8f7f3;
+  outline: 2px solid #f0eee9;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.test > span,
+.pray > span,
+.sermon > span {
+  position: absolute;
+  bottom: 20px;
+  left: -18px;
+  width: 170px;
+  padding: 8px;
+  text-align: center;
+  font-size: 1rem;
+  background-color: #0000ff;
+  color: #fff;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* For the tablet View */
+@media screen and (max-width: 992px) {
+  .test-cont {
+    padding: 0px 50px;
+    gap: 30px;
+  }
+  .test,
+  .pray,
+  .sermon {
+    width: 200px;
+    height: 150px;
+  }
+}
+
+/* For the mobile View */
+@media screen and (max-width: 576px) {
+  .test-cont {
+    flex-direction: column;
+    padding: 50px 10px;
+    height: auto;
+  }
+  .test,
+  .pray,
+  .sermon {
+    width: 100%;
+    height: 250px;
+  }
+
+  .test > span,
+  .pray > span,
+  .sermon > span {
+    left: -8px;
+    bottom: 25px;
+  }
+}

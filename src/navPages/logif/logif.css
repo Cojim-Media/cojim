@@ -1,0 +1,78 @@
+.logif-body {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  height: 100vh;
+  gap: 40px;
+}
+.logif-img {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.logif-img > img {
+  width: 500px;
+}
+
+/* for the text */
+.logif-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.logif-text > h2 {
+  font-size: 1.8rem;
+  color: #333333;
+  padding-bottom: 20px;
+  box-shadow: 0px 2px #ededed;
+}
+
+.logif-text > h3 {
+  font-size: 1.8rem;
+  color: #333333;
+}
+.logif-text ul > li {
+  list-style-type: disc;
+  color: #716f6b;
+}
+
+/* for the social icons */
+.icons {
+  margin-left: 30px;
+}
+
+/* For the tablet view */
+@media screen and (max-width: 992px) {
+  .logif-body {
+    padding: 100px 20px 0px 20px;
+  }
+  .logif-img > img {
+    width: 370px;
+  }
+  .logif-text > h2,
+  .logif-text > h3 {
+    font-size: 1.6rem;
+  }
+}
+
+/* For the mobile View */
+@media screen and (max-width: 576px) {
+  .logif-body {
+    flex-direction: column-reverse;
+    padding: 100px 20px;
+  }
+  .logif-img {
+    gap: 40px;
+  }
+  .logif-img > img {
+    width: 300px;
+  }
+  .logif-text {
+    padding: 0 20px;
+  }
+  .logif-text > h2,
+  .logif-text > h3 {
+    font-size: 1.5rem;
+  }
+}

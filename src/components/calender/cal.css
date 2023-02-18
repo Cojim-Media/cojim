@@ -1,0 +1,72 @@
+.ca-cont {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #f8f7f3;
+  align-items: center;
+  box-shadow: 0px 2px #ededed;
+  height: 100px;
+}
+
+.events {
+  display: flex;
+  gap: 10px;
+}
+.calender {
+  color: #666666;
+  font-size: 2.7rem;
+}
+.next {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.next > span {
+  text-transform: uppercase;
+  width: 60px;
+  padding: 5px;
+  text-align: center;
+  font-size: 0.9rem;
+  background-color: #0000ff;
+  color: #fff;
+  font-weight: 600;
+}
+.date > p {
+  color: #666666;
+}
+
+.all-event {
+  width: 120px;
+  padding: 12px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  background-color: #0000ff;
+  color: #fff;
+  font-weight: 600;
+}
+/* For the mobile View */
+@media screen and (max-width: 576px) {
+  .date {
+    display: none;
+    overflow: hidden;
+  }
+  .calender {
+    font-size: 2rem;
+  }
+  .next > span {
+    font-size: 0.7rem;
+  }
+  .next > h4 {
+    font-size: 0.8rem;
+  }
+  .all-event {
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    background-color: #008ac4;
+    color: #fff;
+    font-weight: 600;
+  }
+}

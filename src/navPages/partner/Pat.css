@@ -1,0 +1,97 @@
+.pat-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.pat-cont {
+  background-color: #eaeaea;
+  display: flex;
+  align-items: center;
+  width: 800px;
+  height: 400px;
+}
+
+.pat-left {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #fff;
+  gap: 20px;
+  width: 50%;
+  height: 400px;
+  background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)),
+    url('../../img/partner.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.pat-left > a {
+  text-align: center;
+  background-color: #0000ff;
+  font-size: 1rem;
+  color: #fff;
+  width: 100px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.pat-right {
+  width: 50%;
+  color: #726a67;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.pat-right > img {
+  width: 200px;
+}
+.patR-para {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.patR-para span {
+  font-weight: 700;
+}
+
+.patR-para p {
+  text-transform: uppercase;
+}
+
+/* For the tablet view */
+@media screen and (max-width: 992px) {
+  .pat-cont {
+    width: 700px;
+  }
+  .pat-left {
+    font-size: 1.3rem;
+  }
+  .patR-para {
+    width: 320px;
+  }
+}
+
+/* For the mobile View */
+@media screen and (max-width: 576px) {
+  .pat-body {
+    padding: 450px 0px;
+  }
+  .pat-cont {
+    flex-direction: column;
+    width: 700px;
+    height: 800px;
+    gap: 30px;
+  }
+  .pat-left {
+    width: 100%;
+    padding: 0px 20px;
+  }
+}

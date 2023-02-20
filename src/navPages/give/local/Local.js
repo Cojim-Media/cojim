@@ -215,7 +215,7 @@ const Local = () => {
               />
             </form>
           </div>
-          <div className="paystack">
+          {/* <div className="paystack">
             <div className="pay-form">
               <h2>Pay with PayStack</h2>
               <div className="pay-input">
@@ -261,7 +261,7 @@ const Local = () => {
                 />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="about-socio l-icon">

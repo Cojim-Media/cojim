@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 // import ReactDOM from 'react-dom';
 import { AiFillInstagram } from 'react-icons/ai';
 import { FaFacebookF, FaTiktok, FaTwitter } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Footer from '../../../components/footer/Footer';
 import Navbar from '../../../components/navbar/Navbar';
-import PayStackPop from '@paystack/inline-js';
+// import PayStackPop from '@paystack/inline-js';
 import './local.css';
 
 // const PayPalButton = window.paypal.Buttons.driver('react', { React, ReactDOM });
@@ -14,10 +14,10 @@ const Local = () => {
   // const [show, setshow] = useState(true);
 
   //for the payStack payment
-  const [email, setemail] = useState('');
-  const [amount, setamount] = useState('');
-  const [first, setfirst] = useState('');
-  const [last, setlast] = useState('');
+  // const [email, setemail] = useState('');
+  // const [amount, setamount] = useState('');
+  // const [first, setfirst] = useState('');
+  // const [last, setlast] = useState('');
 
   const makeid = (length) => {
     let result = '';
@@ -31,52 +31,52 @@ const Local = () => {
     return result;
   }
 
-  const paystack = (e) => {
-    e.preventDefault();
+  // const paystack = (e) => {
+  //   e.preventDefault();
 
-    const payme = new PayStackPop();
-    payme.newTransaction({
-      key: 'pk_live_439d0945863071775784e3267f50754fcd8be337',
-      amount: amount * 100,
-      email,
-      first,
-      last,
-      onSuccess(transaction) {
-        let message = `Payment Complete! Reference ${transaction.reference}`;
-        alert(message);
-        setemail('');
-        setamount('');
-        setfirst('');
-        setlast('');
-      },
-      onCancel() {
-        alert('You have cancelled the transaction');
-      },
-    });
-  };
-  const paystack2 = (e) => {
-    e.preventDefault();
+  //   const payme = new PayStackPop();
+  //   payme.newTransaction({
+  //     key: 'pk_live_439d0945863071775784e3267f50754fcd8be337',
+  //     amount: amount * 100,
+  //     email,
+  //     first,
+  //     last,
+  //     onSuccess(transaction) {
+  //       let message = `Payment Complete! Reference ${transaction.reference}`;
+  //       alert(message);
+  //       setemail('');
+  //       setamount('');
+  //       setfirst('');
+  //       setlast('');
+  //     },
+  //     onCancel() {
+  //       alert('You have cancelled the transaction');
+  //     },
+  //   });
+  // };
+  // const paystack2 = (e) => {
+  //   e.preventDefault();
 
-    const payme = new PayStackPop();
-    payme.newTransaction({
-      key: 'pk_test_39fa63e9fe4d9ab4ee92e510a2b85a30d7c45a65',
-      amount: amount * 100,
-      email,
-      first,
-      last,
-      onSuccess(transaction) {
-        let message = `Payment Complete! Reference ${transaction.reference}`;
-        alert(message);
-        setemail('');
-        setamount('');
-        setfirst('');
-        setlast('');
-      },
-      onCancel() {
-        alert('You have cancelled the transaction');
-      },
-    });
-  };
+  //   const payme = new PayStackPop();
+  //   payme.newTransaction({
+  //     key: 'pk_test_39fa63e9fe4d9ab4ee92e510a2b85a30d7c45a65',
+  //     amount: amount * 100,
+  //     email,
+  //     first,
+  //     last,
+  //     onSuccess(transaction) {
+  //       let message = `Payment Complete! Reference ${transaction.reference}`;
+  //       alert(message);
+  //       setemail('');
+  //       setamount('');
+  //       setfirst('');
+  //       setlast('');
+  //     },
+  //     onCancel() {
+  //       alert('You have cancelled the transaction');
+  //     },
+  //   });
+  // };
 
   // for paypal payment
   // const [price, setprice] = useState(0);

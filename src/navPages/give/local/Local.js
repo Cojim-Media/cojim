@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import { AiFillInstagram } from 'react-icons/ai';
 import { FaFacebookF, FaTiktok, FaTwitter } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
@@ -8,16 +8,28 @@ import Navbar from '../../../components/navbar/Navbar';
 import PayStackPop from '@paystack/inline-js';
 import './local.css';
 
-const PayPalButton = window.paypal.Buttons.driver('react', { React, ReactDOM });
+// const PayPalButton = window.paypal.Buttons.driver('react', { React, ReactDOM });
 const Local = () => {
   // For the display for the PayStack
-  const [show, setshow] = useState(true);
+  // const [show, setshow] = useState(true);
 
   //for the payStack payment
   const [email, setemail] = useState('');
   const [amount, setamount] = useState('');
   const [first, setfirst] = useState('');
   const [last, setlast] = useState('');
+
+  const makeid = (length) => {
+    let result = '';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const charactersLength = characters.length;
+    let counter = 0;
+    while (counter < length) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      counter += 1;
+    }
+    return result;
+  }
 
   const paystack = (e) => {
     e.preventDefault();
@@ -67,22 +79,22 @@ const Local = () => {
   };
 
   // for paypal payment
-  const [price, setprice] = useState(0);
-  const createOrder = (data, actions) => {
-    return actions.order.create({
-      purchase_units: [
-        {
-          amount: {
-            value: price,
-          },
-        },
-      ],
-    });
-  };
+  // const [price, setprice] = useState(0);
+  // const createOrder = (data, actions) => {
+  //   return actions.order.create({
+  //     purchase_units: [
+  //       {
+  //         amount: {
+  //           value: price,
+  //         },
+  //       },
+  //     ],
+  //   });
+  // };
 
-  const onApprove = (data, actions) => {
-    return actions.order.capture();
-  };
+  // const onApprove = (data, actions) => {
+  //   return actions.order.capture();
+  // };
   return (
     <>
       <Navbar />
@@ -151,70 +163,104 @@ const Local = () => {
         </div>
         {/* ONLINE PAYMENT */}
         <div className="l-right">
-          <h2>Donate via PayPal</h2>
-          <div className="cont">
-            <label>Enter a Price:</label>
-            <input
-              type="number"
-              onChange={(e) => setprice(e.target.value)}
-              value={price}
-            />
-            <PayPalButton
-              createOrder={(data, actions) => createOrder(data, actions)}
-              onApprove={(data, actions) => onApprove(data, actions)}
-            />
+
+          <div className="pay-form">
+            <h2>Pay with GlobalPay</h2>
+            <form
+              className="pay-input"
+              method="Post"
+              action="https://demo.globalpay.com.ng/globalpay_demo/Paymentgatewaycapture.aspx"
+            >
+              <label htmlFor="email">Full Name:</label>
+              <input
+                type="text"
+                placeholder="e.g John Doe"
+                name="names"
+              />
+
+              <label htmlFor="first-name">Amount:</label>
+              <input
+                type="text"
+                name="amount"
+                placeholder="e.g 10000"
+              />
+
+              <label htmlFor="last-name">Email Address:</label>
+              <input
+                type="email"
+                name="email_address"
+                placeholder="e.g john@email.com"
+              />
+
+              <label htmlFor="amount">Phone Number:</label>
+              <input
+                type="text"
+                name="phone_number"
+                placeholder="+234918675656"
+              />
+
+              <label htmlFor="amount">Currency:</label>
+              <select name="currency" className="text-2xl w-64 font-bold rounded border-2 border-pribg-primary text-gray-600 h-14 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none">
+                <option>NGN</option>
+                <option>USD</option>
+              </select>
+
+              <input type="hidden" id="merch_txnref" name="merch_txnref" value={makeid(50)}></input>
+              <input type="hidden" id="merchantid" name="merchantid" value="22979" />
+
+              <input
+                className="pay-sub"
+                type="submit"
+                value="Pay with GlobalPay"
+              />
+            </form>
           </div>
           <div className="paystack">
-            <button className="pay-btn" onClick={() => setshow(!show)}>
-              PayStack
-            </button>
-            {show && (
-              <div className="pay-form">
-                <h2>Pay with PayStack</h2>
-                <div className="pay-input">
-                  <label htmlFor="email">Email:</label>
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setemail(e.target.value)}
-                  />
+            <div className="pay-form">
+              <h2>Pay with PayStack</h2>
+              <div className="pay-input">
+                <label htmlFor="email">Email:</label>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setemail(e.target.value)}
+                />
 
-                  <label htmlFor="first-name">FirstName:</label>
-                  <input
-                    type="text"
-                    value={first}
-                    onChange={(e) => setfirst(e.target.value)}
-                  />
+                <label htmlFor="first-name">FirstName:</label>
+                <input
+                  type="text"
+                  value={first}
+                  onChange={(e) => setfirst(e.target.value)}
+                />
 
-                  <label htmlFor="last-name">LastName:</label>
-                  <input
-                    type="text"
-                    value={last}
-                    onChange={(e) => setlast(e.target.value)}
-                  />
+                <label htmlFor="last-name">LastName:</label>
+                <input
+                  type="text"
+                  value={last}
+                  onChange={(e) => setlast(e.target.value)}
+                />
 
-                  <label htmlFor="amount">Amount:</label>
-                  <input
-                    type="number"
-                    value={amount}
-                    onChange={(e) => setamount(e.target.value)}
-                  />
+                <label htmlFor="amount">Amount:</label>
+                <input
+                  type="number"
+                  value={amount}
+                  onChange={(e) => setamount(e.target.value)}
+                />
 
-                  <input
-                    onClick={paystack}
-                    className="pay-sub"
-                    type="submit"
-                    value="Pay to COJIM"
-                  />
-                  <input
-                    onClick={paystack2}
-                    className="pay-sub"
-                    type="submit"
-                    value="Pay to LOGIF"
-                  />
-                </div>
+                <input
+                  onClick={paystack}
+                  className="pay-sub"
+                  type="submit"
+                  value="Pay to COJIM"
+                />
+                <input
+                  onClick={paystack2}
+                  className="pay-sub"
+                  type="submit"
+                  value="Pay to LOGIF"
+                />
               </div>
-            )}
+            </div>
           </div>
         </div>
       </div>

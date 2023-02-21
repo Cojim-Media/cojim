@@ -8,7 +8,8 @@ import Logif from './navPages/logif/Logif';
 import Media from './navPages/media/Media';
 import Give from './navPages/give/Give';
 import Local from './navPages/give/local/Local';
-import Inter from './navPages/give/inter/Inter';
+import International from './navPages/give/International';
+// import Inter from './navPages/give/inter/Inter';
 import Partner from './navPages/partner/Partner';
 import Gallery from './navPages/galery/Gallery';
 
@@ -25,7 +26,8 @@ function App() {
           <Route path="/media" exact element={<Media />} />
           <Route path="/give" exact element={<Give />} />
           <Route path="/local" exact element={<Local />} />
-          <Route path="/inter" exact element={<Inter />} />
+          <Route path="/inter" exact element={<International />} />
+          {/* <Route path="/inter" exact element={<Inter />} /> */}
           <Route path="/partner" exact element={<Partner />} />
           <Route path="/gallery" exact element={<Gallery />} />
         </Routes>

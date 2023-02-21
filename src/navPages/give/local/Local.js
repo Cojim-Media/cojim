@@ -162,60 +162,76 @@ const Local = () => {
           </Link>
         </div>
         {/* ONLINE PAYMENT */}
-        <div className="l-right">
 
-          <div className="pay-form">
-            <h2>Pay with GlobalPay</h2>
-            <form
-              className="pay-input"
-              method="Post"
-              action="https://demo.globalpay.com.ng/globalpay_demo/Paymentgatewaycapture.aspx"
-            >
-              <label htmlFor="email">Full Name:</label>
-              <input
-                type="text"
-                placeholder="e.g John Doe"
-                name="names"
-              />
+        <div className="pay-form">
+          <div className="flex items-center justify-center p-12">
+            <div className="mx-auto w-full max-w-[550px] bg-white">
+              <form
+                className="py-6 px-9"
+                action="https://demo.globalpay.com.ng/globalpay_demo/Paymentgatewaycapture.aspx"
+                method="POST"
+              >
+                <div className="mb-5">
+                  Pay with <img alt="Globay Pay" src="https://demo.globalpay.com.ng/GlobalPayAPI/img/globalpay.jpg" className="w-20 h-4" />
+                  <label
+                    htmlFor="email"
+                    className="mb-3 block text-base font-medium text-[#07074D]"
+                  >
+                    Fill in the required details below to continue:
+                  </label>
+                  <div className="font-semibold">Full Name</div>
+                  <div className="mb-2">
+                    <input name="names" className="mt-1 w-full rounded-[4px] border border-[#A0ABBB] p-2" type="text" placeholder="e.g John Doe" />
+                  </div>
 
-              <label htmlFor="first-name">Amount:</label>
-              <input
-                type="text"
-                name="amount"
-                placeholder="e.g 10000"
-              />
+                  <div className="font-semibold">How much would you like to donate?</div>
+                  <div className="mb-2">
+                    <input name="amount" className="mt-1 w-full rounded-[4px] border border-[#A0ABBB] p-2" type="text" placeholder="e.g 10000" />
+                  </div>
 
-              <label htmlFor="last-name">Email Address:</label>
-              <input
-                type="email"
-                name="email_address"
-                placeholder="e.g john@email.com"
-              />
+                  <div className="font-semibold">Enter your email address</div>
+                  <div className="mb-2">
+                    <input name="email_address" className="mt-1 w-full rounded-[4px] border border-[#A0ABBB] p-2" type="text" placeholder="e.g john@gmail.com" />
+                  </div>
 
-              <label htmlFor="amount">Phone Number:</label>
-              <input
-                type="text"
-                name="phone_number"
-                placeholder="+234918675656"
-              />
+                  <div className="font-semibold">Enter your phone number</div>
+                  <div className="mb-2">
+                    <input name="phone_number" className="mt-1 w-full rounded-[4px] border border-[#A0ABBB] p-2" type="text" placeholder="e.g +2349087655445" />
+                  </div>
 
-              <label htmlFor="amount">Currency:</label>
-              <select name="currency" className="text-2xl w-64 font-bold rounded border-2 border-pribg-primary text-gray-600 h-14 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none">
-                <option>NGN</option>
-                <option>USD</option>
-              </select>
+                  <div className="relative inline-flex self-center">
+                    <svg className="text-white bg-primary absolute top-0 right-0 m-2 pointer-events-none p-2 rounded" xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 38 22" version="1.1">
+                      <title>F09B337F-81F6-41AC-8924-EC55BA135736</title>
+                      <g id="ZahnhelferDE—Design" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                        <g transform="translate(-539.000000, -199.000000)" fill="#ffffff" fillRule="nonzero">
+                          <g id="Icon-/-ArrowRight-Copy-2" transform="translate(538.000000, 183.521208)">
+                            <polygon id="Path-Copy" transform="translate(20.000000, 18.384776) rotate(135.000000) translate(-20.000000, -18.384776) " points="33 5.38477631 33 31.3847763 29 31.3847763 28.999 9.38379168 7 9.38477631 7 5.38477631" />
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                    <select name="currency" className="text-2xl w-64 font-bold rounded border-2 border-pribg-primary text-gray-600 h-14 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none">
+                      <option>NGN</option>
+                    </select>
+                  </div>
 
-              <input type="hidden" id="merch_txnref" name="merch_txnref" value={makeid(50)}></input>
-              <input type="hidden" id="merchantid" name="merchantid" value="22979" />
+                  <input type="hidden" id="merch_txnref" name="merch_txnref" value={makeid(50)}></input>
+                  <input type="hidden" id="merchantid" name="merchantid" value="22979" />
+                </div>
 
-              <input
-                className="pay-sub"
-                type="submit"
-                value="Pay with GlobalPay"
-              />
-            </form>
+
+                <div>
+                  <button
+                    className="hover:shadow-form w-full rounded-md bg-primary py-3 px-8 text-center text-base font-semibold text-white outline-none"
+                  >
+                    Pay Now
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
-          {/* <div className="paystack">
+        </div>
+        {/* <div className="paystack">
             <div className="pay-form">
               <h2>Pay with PayStack</h2>
               <div className="pay-input">
@@ -262,7 +278,6 @@ const Local = () => {
               </div>
             </div>
           </div> */}
-        </div>
       </div>
       <div className="about-socio l-icon">
         <a

@@ -350,7 +350,7 @@ const International = () => {
                                             </label>
                                             <div className="font-semibold">Full Name</div>
                                             <div className="mb-2">
-                                                <input name="names" className="mt-1 w-full rounded-[4px] border border-[#A0ABBB] p-2" type="text" placeholder="e.g John Doe" />
+                                                <input name="names" className="mt-1 w-full rounded-[4px] border border-[#A0ABBB] p-2" type="text" placeholder="e.g Christopher Orji" />
                                             </div>
 
                                             <div className="font-semibold">How much would you like to donate?</div>
@@ -360,12 +360,12 @@ const International = () => {
 
                                             <div className="font-semibold">Enter your email address</div>
                                             <div className="mb-2">
-                                                <input name="email_address" className="mt-1 w-full rounded-[4px] border border-[#A0ABBB] p-2" type="text" placeholder="e.g john@gmail.com" />
+                                                <input name="email_address" className="mt-1 w-full rounded-[4px] border border-[#A0ABBB] p-2" type="text" placeholder="e.g cojimmedia@gmail.com" />
                                             </div>
 
                                             <div className="font-semibold">Enter your phone number</div>
                                             <div className="mb-2">
-                                                <input name="phone_number" className="mt-1 w-full rounded-[4px] border border-[#A0ABBB] p-2" type="text" placeholder="e.g +2349087655445" />
+                                                <input name="phone_number" className="mt-1 w-full rounded-[4px] border border-[#A0ABBB] p-2" type="text" placeholder="e.g +2347043315405" />
                                             </div>
 
                                             <div className="relative inline-flex self-center">

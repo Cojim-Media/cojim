@@ -105,7 +105,7 @@ const International = () => {
                                 numbers;
                             </p>
 
-                            <span>Lovers of God international Foundation</span>
+                            <span>CITY OF JESUS INTERNATIONAL MINISTRY’S ACCOUNT DETAILS:</span>
                             {/* banks */}
                             <div className="inter-bank">
                                 <section className="bg-[#F3F4F6] pt-4 pb-10 px-4">
@@ -159,16 +159,16 @@ const International = () => {
                                                             </a>
                                                         </h3>
                                                         <p className="text-body-color mb-1 text-base leading-relaxed">
-                                                            Naira 1022696637
+                                                            Naira 1022696668
                                                         </p>
                                                         <p className="text-body-color mb-1 text-base leading-relaxed">
-                                                            Usd 3002854480
+                                                            Usd 3002854514
                                                         </p>
                                                         <p className="text-body-color mb-1 text-base leading-relaxed">
-                                                            Eur 3002854497
+                                                            Euro 3002855545
                                                         </p>
                                                         <p className="text-body-color mb-1 text-base leading-relaxed">
-                                                            GBP 3002854507
+                                                            GBP 3002854600
                                                         </p>
                                                     </div>
                                                 </div>
@@ -190,16 +190,16 @@ const International = () => {
                                                             </a>
                                                         </h3>
                                                         <p className="text-body-color mb-1 text-base leading-relaxed">
-                                                            Pounds - 5060333978
+                                                            Pounds - 5060333985
                                                         </p>
                                                         <p className="text-body-color mb-1 text-base leading-relaxed">
-                                                            Dollars - 5071304631
+                                                            Dollars - 5071304648
                                                         </p>
                                                         <p className="text-body-color mb-1 text-base leading-relaxed">
-                                                            Euro - 5080327715
+                                                            Euro - 5080327722
                                                         </p>
                                                         <p className="text-body-color mb-1 text-base leading-relaxed">
-                                                            Naira - 1017152353
+                                                            Naira - 1017152360
                                                         </p>
                                                     </div>
                                                 </div>
@@ -221,16 +221,16 @@ const International = () => {
                                                             </a>
                                                         </h3>
                                                         <p className="text-body-color mb-1 text-base leading-relaxed">
-                                                            2035291381(NGN)
+                                                            2035291271(NGN)
                                                         </p>
                                                         <p className="text-body-color mb-1 text-base leading-relaxed">
-                                                            2035291673(GBP)
+                                                            2035291532(GBP)
                                                         </p>
                                                         <p className="text-body-color mb-1 text-base leading-relaxed">
-                                                            2035291721(EUR)
+                                                            2035291604(EUR)
                                                         </p>
                                                         <p className="text-body-color mb-1 text-base leading-relaxed">
-                                                            2035291628(USD)
+                                                            2035291518(USD)
                                                         </p>
                                                     </div>
                                                 </div>

@@ -35,7 +35,7 @@ const Media = () => {
             style={{ paddingTop: "56.25%" }}>
             <iframe
               class="embed-responsive-item absolute top-0 right-0 bottom-0 left-0 h-full w-full"
-              src="https://www.youtube.com/embed/v64KOxKVLVg"
+              src="https://www.youtube.com/embed/bx7hosDBJEE"
               allowfullscreen></iframe>
           </div>
 
@@ -44,7 +44,7 @@ const Media = () => {
             style={{ paddingTop: "56.25%" }}>
             <iframe
               class="embed-responsive-item absolute top-0 right-0 bottom-0 left-0 h-full w-full"
-              src="https://player.vimeo.com/video/137857207"
+              src="https://www.youtube.com/embed/3Cs4xKwkd6w"
               allowfullscreen></iframe>
           </div>
           <div
@@ -52,7 +52,7 @@ const Media = () => {
             style={{ paddingTop: "56.25%" }}>
             <iframe
               class="embed-responsive-item absolute top-0 right-0 bottom-0 left-0 h-full w-full"
-              src="https://www.youtube.com/embed/v64KOxKVLVg"
+              src="https://www.youtube.com/embed/--SKSM_mly0"
               allowfullscreen></iframe>
           </div>
 
@@ -61,7 +61,7 @@ const Media = () => {
             style={{ paddingTop: "56.25%" }}>
             <iframe
               class="embed-responsive-item absolute top-0 right-0 bottom-0 left-0 h-full w-full"
-              src="https://player.vimeo.com/video/137857207"
+              src="https://www.youtube.com/embed/idOKZYUissI"
               allowfullscreen></iframe>
           </div>
         </div>
@@ -77,19 +77,19 @@ const Media = () => {
                 <img
                   alt="gallery"
                   class="block h-full w-full rounded-lg object-cover object-center"
-                  src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp" />
+                  src="https://res.cloudinary.com/cojim/image/upload/v1677930164/gallery/0Q0A1084_andvjf.jpg" />
               </div>
               <div class="w-1/2 p-1 md:p-2">
                 <img
                   alt="gallery"
                   class="block h-full w-full rounded-lg object-cover object-center"
-                  src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp" />
+                  src="https://res.cloudinary.com/cojim/image/upload/v1677930164/gallery/tes-min_p8yji6.jpg" />
               </div>
               <div class="w-full p-1 md:p-2">
                 <img
                   alt="gallery"
                   class="block h-full w-full rounded-lg object-cover object-center"
-                  src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
+                  src="https://res.cloudinary.com/cojim/image/upload/v1677930167/gallery/0Q0A1081_bi2vsa.jpg" />
               </div>
             </div>
             <div class="flex w-1/2 flex-wrap">
@@ -97,19 +97,19 @@ const Media = () => {
                 <img
                   alt="gallery"
                   class="block h-full w-full rounded-lg object-cover object-center"
-                  src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp" />
+                  src="https://res.cloudinary.com/cojim/image/upload/v1677930160/gallery/0Q0A1107-min_estv3i.jpg" />
               </div>
               <div class="w-1/2 p-1 md:p-2">
                 <img
                   alt="gallery"
                   class="block h-full w-full rounded-lg object-cover object-center"
-                  src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp" />
+                  src="https://res.cloudinary.com/cojim/image/upload/v1677930165/gallery/img5-min_wv8msp.jpg" />
               </div>
               <div class="w-1/2 p-1 md:p-2">
                 <img
                   alt="gallery"
                   class="block h-full w-full rounded-lg object-cover object-center"
-                  src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(77).webp" />
+                  src="https://res.cloudinary.com/cojim/image/upload/v1677930159/gallery/tes2-min_efmjp9.jpg" />
               </div>
             </div>
           </div>

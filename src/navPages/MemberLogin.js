@@ -64,6 +64,11 @@ const MemberLogin = () => {
     }
   }
 
+  useEffect(() => {
+    // start up backend server
+    fetch('/api/startup');
+  }, []);
+
   return (
     <>
       <Navbar />

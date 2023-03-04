@@ -242,7 +242,7 @@ const International = () => {
 
                             <span>Purpose of donation - </span>
                             <ul>
-                                <li>LOGIF Partnership</li>
+                                <li>COJIM Partnership</li>
                                 <li>Seed sowing/Offering</li>
                                 <li>Donation</li>
                                 <li>Church building fund</li>

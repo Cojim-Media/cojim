@@ -116,7 +116,7 @@ const Home = () => {
                 <img className="h-36 w-full rounded-lg object-cover object-center lg:h-44" src={donate_min} alt="" />
                 <div className="absolute bottom-0 flex p-3 bg-gray-900">
                   <div className="mx-4">
-                    <a target="_blank" href="https://logif.org">
+                    <a target="_blank" rel="noreferrer" href="https://logif.org">
                       <h1 className="text-sm text-gray-200">Want to do good? Donate today</h1>
                     </a>
                   </div>

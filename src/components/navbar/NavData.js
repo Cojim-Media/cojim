@@ -16,7 +16,7 @@ export const NavMenuList = [
     link: '/events',
   },
   {
-    title: 'LOGIF',
+    title: 'COJIM',
     link: '/logif',
   },
   {

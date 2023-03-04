@@ -67,6 +67,11 @@ const AdminLogin = () => {
         }
     }
 
+    useEffect(() => {
+        // start up backend server
+        fetch('/api/startup');
+    }, []);
+
     return (
         // < !--component -- >
         <div className="px-2 py-8 flex flex-col justify-center sm:py-12">

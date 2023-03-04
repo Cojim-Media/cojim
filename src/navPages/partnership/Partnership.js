@@ -244,6 +244,10 @@ const Partnership = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [uploadedPassportImg]);
 
+    useEffect(() => {
+        // start up backend server
+        fetch('/api/startup');
+    }, []);
 
     return (
         <>

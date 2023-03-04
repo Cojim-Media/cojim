@@ -27,7 +27,7 @@ const Home = () => {
   useEffect(() => {
     // start up backend server
     fetch('/api/startup');
-  },[])
+  },[]);
 
   return (
     <>

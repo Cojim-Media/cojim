@@ -22,23 +22,9 @@ const About = () => {
                     Our Mission Statement.
                   </h4>
                   <p className="text-md font-light mt-2 text-white">
-                    At City Of Jesus International Ministry, our mission is to bring the lost sheep to the Kingdom of God.
-                    We believe that the gospel of our Lord and Saviour Jesus Christ is the only way to accomplish this mission.
-                  </p>
-                  <p className="text-md font-light mt-2 text-white">
-                    Our approach is two-fold. First, we aim to preach the gospel to all nations and every creature,
-                    using both words and life.
-                    We recognize that our actions often speak louder than our words,
-                    and so we strive to live our lives in accordance with the gospel we proclaim.
-                  </p>
-                  <p className="text-md font-light mt-2 text-white">
-                    Second, we aim to teach the gospel to those who have already heard it.
-                    We believe that there is always more to learn about God's Word and His plan for our lives,
-                    and so we offer a variety of teaching opportunities to help people grow in their faith.
-                  </p>
-                  <p className="text-md font-light mt-2 text-white">
-                    Through our preaching and teaching, we hope to help others experience the life-changing power
-                    of the gospel and to bring them into the Kingdom of God.
+                    Our mission is to preach and teach all nations and every creature, 
+                    the gospel of our Lord and Saviour Jesus Christ, in both words and Life and with it, 
+                    bring the lost sheep to the Kingdom of God
                   </p>
                 </blockquote>
               </div>
@@ -53,7 +39,7 @@ const About = () => {
                   Spirit is the One who reveals Jesus to us.
                 </p>
                 <p className="text-gray-500 mb-6">
-                  At City Of Jesus International Ministry, we believe that God and His Word are one.
+                  At City Of Jesus International Ministry, we believe that God and His Word are One.
                   God's Word represents His heart's desire, and Jesus is the Word by whom God speaks to us.
                   The Holy Spirit is the One who reveals Jesus to us.
                   We believe that Holy men of God were carried along by the Holy Spirit as they spoke the message

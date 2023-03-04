@@ -6,7 +6,7 @@ const Footer = () => {
       <footer className="bg-neutral-200 text-center text-white">
         <div className="container pt-4">
           <div className="mb-4 flex justify-center">
-            <a href="https://web.facebook.com/ChristopherOrjiMinistriesCOJIM?mibextid=ZbWKwL&_rdc=1&_rdr" className="mr-9 text-neutral-800">
+            <a target="_blank" rel="noopener noreferrer" href="https://web.facebook.com/ChristopherOrjiMinistriesCOJIM?mibextid=ZbWKwL&_rdc=1&_rdr" className="mr-9 text-neutral-800">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-4 w-4"
@@ -16,7 +16,7 @@ const Footer = () => {
                   d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
               </svg>
             </a>
-            <a href="https://twitter.com/cojimofficiel?t=gM2yvX_4GzUAgcdXD-rP8g&s=09" className="mr-9 text-neutral-800">
+            <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/cojimofficiel?t=gM2yvX_4GzUAgcdXD-rP8g&s=09" className="mr-9 text-neutral-800">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-4 w-4"
@@ -27,7 +27,7 @@ const Footer = () => {
               </svg>
             </a>
 
-            <a href="https://www.instagram.com/cojimofficiel/?igshid=YmMyMTA2M2Y%3D" className="mr-9 text-neutral-800">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/cojimofficiel/?igshid=YmMyMTA2M2Y%3D" className="mr-9 text-neutral-800">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-4 w-4"
@@ -38,7 +38,7 @@ const Footer = () => {
               </svg>
             </a>
 
-            <a href="https://www.youtube.com/@christopherorjiministries6459" className="mr-9 text-neutral-800">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@christopherorjiministries6459" className="mr-9 text-neutral-800">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"

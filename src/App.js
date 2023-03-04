@@ -31,6 +31,7 @@ import MemberList from 'navPages/MemberList';
 import MemberMakePayment from 'navPages/MemberMakePayment';
 import PartnerMakePayment from 'navPages/PartnerMakePayment';
 import MemberPaymentList from 'navPages/MemberPaymentList';
+import MediaUpload from 'navPages/MediaUpload';
 
 function App() {
   return (
@@ -60,6 +61,7 @@ function App() {
             <Route path="partners-list" element={<PartnersList />} />
             <Route path="members-list" element={<MemberList />} />
             <Route path="unconfirmed-payments" element={<UnconfirmedPayments />} />
+            <Route path="media-upload" element={<MediaUpload />} />
             <Route path="profile" element={<Profile />} />
             <Route path="partner-payment-list/:partnerId" element={<PartnerPaymentList />} />
             <Route path="member-payment-list/:memberId" element={<MemberPaymentList />} />

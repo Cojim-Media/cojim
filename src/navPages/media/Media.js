@@ -1,9 +1,51 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Footer from '../../components/footer/Footer';
 import Navbar from '../../components/navbar/Navbar';
 
 const Media = () => {
+  const [isImageReady, setImageReady] = useState(false);
+  const [galleryImages, setGalleryImages] = useState([]);
+  const [isSermonReady, setSermonReady] = useState(false);
+  const [gallerySermons, setGallerySermons] = useState([]);
+
+  useEffect(() => {
+    // send a get request to the server to fetch galleryImages
+    (async () => {
+      const rawResponse = await fetch(`/api/media/get-images`, {
+        method: 'GET',
+      });
+      const content = await rawResponse.json();
+      // check if there is an error in the response
+      if (content.error) {
+        alert(content.message);
+      } else {
+        setGalleryImages([...content.data]);
+        setImageReady(true);
+      }
+    })();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    // send a get request to the server to fetch gallerySermons
+    (async () => {
+      const rawResponse = await fetch(`/api/media/get-sermons`, {
+        method: 'GET',
+      });
+      const content = await rawResponse.json();
+      // check if there is an error in the response
+      if (content.error) {
+        alert(content.message);
+      } else {
+        setGallerySermons([...content.data]);
+        setSermonReady(true);
+      }
+    })();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+
   return (
     <>
       <Navbar />
@@ -35,7 +77,7 @@ const Media = () => {
             style={{ paddingTop: "56.25%" }}>
             <iframe
               className="embed-responsive-item absolute top-0 right-0 bottom-0 left-0 h-full w-full"
-              src="https://www.youtube.com/embed/bx7hosDBJEE"
+              src={`${isSermonReady ? gallerySermons[0].link : 'https://www.youtube.com/embed/bx7hosDBJEE'}`}
               allowFullScreen></iframe>
           </div>
 
@@ -44,7 +86,7 @@ const Media = () => {
             style={{ paddingTop: "56.25%" }}>
             <iframe
               className="embed-responsive-item absolute top-0 right-0 bottom-0 left-0 h-full w-full"
-              src="https://www.youtube.com/embed/3Cs4xKwkd6w"
+              src={`${isSermonReady ? gallerySermons[1].link : 'https://www.youtube.com/embed/3Cs4xKwkd6w'}`}
               allowFullScreen></iframe>
           </div>
           <div
@@ -52,7 +94,7 @@ const Media = () => {
             style={{ paddingTop: "56.25%" }}>
             <iframe
               className="embed-responsive-item absolute top-0 right-0 bottom-0 left-0 h-full w-full"
-              src="https://www.youtube.com/embed/--SKSM_mly0"
+              src={`${isSermonReady ? gallerySermons[2].link : 'https://www.youtube.com/embed/--SKSM_mly0'}`}
               allowFullScreen></iframe>
           </div>
 
@@ -61,7 +103,7 @@ const Media = () => {
             style={{ paddingTop: "56.25%" }}>
             <iframe
               className="embed-responsive-item absolute top-0 right-0 bottom-0 left-0 h-full w-full"
-              src="https://www.youtube.com/embed/idOKZYUissI"
+              src={`${isSermonReady ? gallerySermons[3].link : 'https://www.youtube.com/embed/idOKZYUissI'}`}
               allowFullScreen></iframe>
           </div>
         </div>
@@ -137,7 +179,7 @@ const Media = () => {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
-              class="h-10 w-10"
+              className="h-10 w-10"
               style={{ color: "#6a76ac" }}>
               <path
                 fill="currentColor"
@@ -156,19 +198,19 @@ const Media = () => {
                 <img
                   alt="gallery"
                   className="block h-full w-full rounded-lg object-cover object-center"
-                  src="https://res.cloudinary.com/cojim/image/upload/v1677930164/gallery/0Q0A1084_andvjf.jpg" />
+                  src={`${isImageReady ? galleryImages[0].link : 'https://res.cloudinary.com/cojim/image/upload/v1677930164/gallery/0Q0A1084_andvjf.jpg'}`} />
               </div>
               <div className="w-1/2 p-1 md:p-2">
                 <img
                   alt="gallery"
                   className="block h-full w-full rounded-lg object-cover object-center"
-                  src="https://res.cloudinary.com/cojim/image/upload/v1677930164/gallery/tes-min_p8yji6.jpg" />
+                  src={`${isImageReady ? galleryImages[1].link : 'https://res.cloudinary.com/cojim/image/upload/v1677930164/gallery/tes-min_p8yji6.jpg'}`} />
               </div>
               <div className="w-full p-1 md:p-2">
                 <img
                   alt="gallery"
                   className="block h-full w-full rounded-lg object-cover object-center"
-                  src="https://res.cloudinary.com/cojim/image/upload/v1677930167/gallery/0Q0A1081_bi2vsa.jpg" />
+                  src={`${isImageReady ? galleryImages[2].link : 'https://res.cloudinary.com/cojim/image/upload/v1677930167/gallery/0Q0A1081_bi2vsa.jpg'}`} />
               </div>
             </div>
             <div className="flex w-1/2 flex-wrap">
@@ -176,19 +218,19 @@ const Media = () => {
                 <img
                   alt="gallery"
                   className="block h-full w-full rounded-lg object-cover object-center"
-                  src="https://res.cloudinary.com/cojim/image/upload/v1677930160/gallery/0Q0A1107-min_estv3i.jpg" />
+                  src={`${isImageReady ? galleryImages[3].link : 'https://res.cloudinary.com/cojim/image/upload/v1677930160/gallery/0Q0A1107-min_estv3i.jpg'}`} />
               </div>
               <div className="w-1/2 p-1 md:p-2">
                 <img
                   alt="gallery"
                   className="block h-full w-full rounded-lg object-cover object-center"
-                  src="https://res.cloudinary.com/cojim/image/upload/v1677930165/gallery/img5-min_wv8msp.jpg" />
+                  src={`${isImageReady ? galleryImages[4].link : 'https://res.cloudinary.com/cojim/image/upload/v1677930165/gallery/img5-min_wv8msp.jpg'}`} />
               </div>
               <div className="w-1/2 p-1 md:p-2">
                 <img
                   alt="gallery"
                   className="block h-full w-full rounded-lg object-cover object-center"
-                  src="https://res.cloudinary.com/cojim/image/upload/v1677930159/gallery/tes2-min_efmjp9.jpg" />
+                  src={`${isImageReady ? galleryImages[5].link : 'https://res.cloudinary.com/cojim/image/upload/v1677930159/gallery/tes2-min_efmjp9.jpg'}`} />
               </div>
             </div>
           </div>

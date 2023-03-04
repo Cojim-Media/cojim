@@ -21,17 +21,18 @@ const ContactUs = () => {
                                 <div className="grow-0 shrink-0 basis-auto m-4 mb-6 md:mb-0 w-full px-3 lg:px-6">
                                     <h2 className="text-3xl font-bold mb-6 text-primary">Contact us</h2>
                                     <p className="text-gray-500 mb-6">
-                                        Welcome to Lovers of God International Foundation-COJIM (Non Governmental Org) contact page.
-                                        We're here to help answer any questions you may have about our organization and the work we do.
-                                        Please feel free to reach out to us by using the contact information provided.
-                                        We'll get back to you as soon as we can. Thank you for your interest in our cause!
+                                        At City of Jesus International Ministry, we believe that every person
+                                        is a valuable part of our community, and we want to make it as easy as
+                                        possible for you to connect with us.
+                                        Whether you have a question, a prayer request, or simply want to say hello,
+                                        we're here for you.
                                     </p>
                                     <p className="text-gray-500 mb-2">
                                         IN/20 Emene Industrial Layout,
                                         Enugu East Local Government Area, Enugu State, Nigeria, West Africa
                                     </p>
                                     <p className="text-gray-500 mb-2">+ 234 704 331 5405</p>
-                                    <p className="text-gray-500 mb-2">info@logif.org</p>
+                                    <p className="text-gray-500 mb-2">info@cojim.org</p>
                                 </div>
                             </div>
                         </div>

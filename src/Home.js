@@ -24,6 +24,11 @@ const Home = () => {
     return () => clearInterval(intervalId);
   }, []);
 
+  useEffect(() => {
+    // start up backend server
+    fetch('/api/startup');
+  },[])
+
   return (
     <>
       <Navbar />
@@ -53,7 +58,7 @@ const Home = () => {
           <div className="grow-0 shrink-0 basis-auto w-full lg:w-5/12 mb-12 lg:mb-0">
             <div className="flex lg:py-12">
               <img src={cta_img} className="w-full rounded-lg shadow-lg"
-                id="cta-img-nml-50" style={{ zIndex: "10" }} alt="" />
+                id="cta-img-nml-50" style={{ zIndex: "1" }} alt="" />
             </div>
           </div>
 
@@ -63,9 +68,11 @@ const Home = () => {
               <div className="lg:pl-12">
                 <h2 className="text-3xl font-bold mb-6">Join us for a worship service</h2>
                 <p className="mb-6 pb-2 lg:pb-0">
-                  Visit us at of our location or online, and get connected with people near you.
+                  Visit us at our location or online, and get connected with people near you.
                 </p>
-                <button type="button" className="inline-block px-7 py-3 border-2 border-white text-white font-medium text-sm leading-snug uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light">Become a partner</button>
+                <a href="membership">
+                  <button type="button" className="inline-block px-7 py-3 border-2 border-white text-white font-medium text-sm leading-snug uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light">Become a member</button>
+                </a>
               </div>
             </div>
           </div>
@@ -74,10 +81,10 @@ const Home = () => {
 
 
 
-      <section className="bg-white dark:bg-gray-900">
+      <section className="bg-gray-900">
         <div className="container mx-auto px-6 py-10">
           <div className="text-center">
-            <h1 className="text-2xl font-semibold capitalize text-gray-800 dark:text-white lg:text-3xl">Finding Hope and Joy in Christ</h1>
+            <h1 className="text-2xl font-semibold capitalize text-white lg:text-3xl">Finding Hope and Joy in Christ</h1>
 
             <p className="mx-auto mt-4 max-w-lg text-gray-500">
               Check out the different ways to get involved at City of Jesus International Ministry
@@ -90,7 +97,9 @@ const Home = () => {
                 <img className="h-36 w-full rounded-lg object-cover object-center lg:h-44" src={online_message} alt="" />
                 <div className="absolute bottom-0 flex p-3 bg-gray-900">
                   <div className="mx-4">
-                    <h1 className="text-sm text-gray-200">Online Messages</h1>
+                    <a href="media">
+                      <h1 className="text-sm text-gray-200">Online Messages</h1>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -107,7 +116,9 @@ const Home = () => {
                 <img className="h-36 w-full rounded-lg object-cover object-center lg:h-44" src={donate_min} alt="" />
                 <div className="absolute bottom-0 flex p-3 bg-gray-900">
                   <div className="mx-4">
-                    <h1 className="text-sm text-gray-200">Want to do good? Donate today</h1>
+                    <a target="_blank" href="https://logif.org">
+                      <h1 className="text-sm text-gray-200">Want to do good? Donate today</h1>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -126,7 +137,9 @@ const Home = () => {
                 <img className="h-36 w-full rounded-lg object-cover object-center lg:h-44" src={partner_min} alt="" />
                 <div className="absolute bottom-0 flex p-3 bg-gray-900">
                   <div className="mx-4">
-                    <h1 className="text-sm text-gray-200">Become a /Partner</h1>
+                    <a href="partnership">
+                    <h1 className="text-sm text-gray-200">Become a Partner</h1>
+                    </a>
                   </div>
                 </div>
               </div>

@@ -137,7 +137,6 @@ const Local = () => {
 
           <span>Purpose of donation - </span>
           <ul>
-            <li>LOGIF Partnership</li>
             <li>Seed sowing/Offering</li>
             <li>Tithe.</li>
           </ul>

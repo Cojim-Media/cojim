@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 const Profile = () => {
     const navigate = useNavigate();
     const [itemDetails, setItemDetails] = useState({});
+    const [isPartner, setIsPartner] = useState(false);
 
     useEffect(() => {
         // send a get request to the server to fetch partners
@@ -24,6 +25,7 @@ const Profile = () => {
             if (content.error) {
                 alert(content.message);
             } else {
+                setIsPartner(content.isPartner);
                 setItemDetails({
                     ...itemDetails,
                     ...content.data
@@ -98,6 +100,25 @@ const Profile = () => {
                                     <div className="px-4 py-2 font-semibold">Country or Residence</div>
                                     <div className="px-4 py-2">{itemDetails.country}</div>
                                 </div>
+                                {
+                                    !isPartner ? (
+                                        <>
+                                            <div className="grid grid-cols-2">
+                                                <div className="px-4 py-2 font-semibold">Membership ID.</div>
+                                                <div className="px-4 py-2">{itemDetails.membershipId}</div>
+                                            </div>
+                                            <div className="grid grid-cols-2">
+                                                <div className="px-4 py-2 font-semibold">Group</div>
+                                                <div className="px-4 py-2">{itemDetails.group}</div>
+                                            </div>
+                                        </>
+                                    ) : (
+                                        <div className="grid grid-cols-2">
+                                            <div className="px-4 py-2 font-semibold">Partnership ID.</div>
+                                            <div className="px-4 py-2">{itemDetails.partnershipId}</div>
+                                        </div>
+                                    )
+                                }
                             </div>
                         </div>
 
@@ -116,11 +137,6 @@ const Profile = () => {
                                 </div>
                             </div>
                         </div>
-                        <Link
-                            to={`../payment-list/${itemDetails._id}`}
-                            className="block w-full text-center text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">
-                            Show Payment History
-                        </Link>
                     </div>
                 </div>
             </div>

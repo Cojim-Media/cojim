@@ -260,9 +260,47 @@ const Membership = () => {
                             </h1>
 
                             <p className="mt-4 text-gray-400">
-                                Please kindly fill out this form below to become a Member.
+                                Thank you for your interest in becoming a committed member
+                                of the City of Jesus International Ministry.
+                                Please review the following commitments that we ask all members to agree to:
                             </p>
 
+                            <ul className="list-disc list-inside mt-2 ml-2">
+                                <li className="mb-3 text-gray-500">
+                                    1. Living a life that is without sins and sinful desires.
+                                </li>
+                                <li className="mb-3 text-gray-500">
+                                    2. Loving God, Jesus Christ and the Holy Spirit above all.
+                                </li>
+                                <li className="mb-3 text-gray-500">
+                                    3. Love and serve others: We believe that following Jesus means loving
+                                    and serving others, just as he did. We ask all members to strive to
+                                    love their fellow human beings as themselves and to seek out opportunities
+                                    to help those who are less privileged.
+                                </li>
+                                <li className="mb-3 text-gray-500">
+                                    4. Tithe
+                                </li>
+                                <li className="mb-3 text-gray-500">
+                                    5. Church building projects supports
+                                </li>
+                                <li className="mb-3 text-gray-500">
+                                    6. Seed Sowing
+                                </li>
+                                <li className="mb-3 text-gray-500">
+                                    7. Offerings
+                                </li>
+                                <li className="mb-3 text-gray-500">
+                                    8. Thanksgiving/Maintenance fees
+                                </li>
+                            </ul>
+
+                            <p className="mt-4 text-gray-400 mb-4">
+                                If you agree to these commitments and would like to become a 
+                                committed member of the City of Jesus International Ministry, 
+                                please fill out the membership form below. 
+                                Thank you for your dedication to the church and its mission.
+                            </p>
 
                             <div className="p-2 flex justify-center items-center mt-2">
                                 <div className="w-full md:w-1/2 relative grid grid-cols-1 md:grid-cols-3 border border-gray-300 bg-gray-100 rounded-lg">

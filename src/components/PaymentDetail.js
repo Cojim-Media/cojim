@@ -58,7 +58,7 @@ const PaymentDetail = ({ toggleEditModal, itemDetails, isEditModalOpen }) => {
             // Redirect the user to login page if status == 401
             if (status === 401) {
                 // redirect to login page
-                navigate("/login");
+                navigate("/");
                 return false;
             }
             // check if there is an error in the response

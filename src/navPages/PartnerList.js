@@ -152,6 +152,7 @@ const PartnersList = () => {
             <PartnerDetail
                 toggleEditModal={toggleEditModal}
                 itemDetails={itemDetails}
+                setItemDetails={setItemDetails}
                 isEditModalOpen={isEditModalOpen} />
             {
                 isEditModalOpen &&

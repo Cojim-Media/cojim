@@ -69,8 +69,8 @@ const MemberList = () => {
                         <th className="py-3 px-6 text-left">Name</th>
                         <th className="py-3 px-6 text-left">Phone</th>
                         <th className="py-3 px-6 text-center">Email </th>
-                        <th className="py-3 px-6 text-center">Nationality</th>
-                        <th className="py-3 px-6 text-center">County of Residence</th>
+                        <th className="py-3 px-6 text-center">Membership ID</th>
+                        <th className="py-3 px-6 text-center">Group</th>
                         <th className="py-3 px-6 text-center">Status</th>
                         <th className="px-4 py-3">Actions</th>
                     </tr>
@@ -105,10 +105,10 @@ const MemberList = () => {
                                                 <span>{member.email}</span>
                                             </td>
                                             <td className="py-3 px-6 text-center">
-                                                <span>{member.nationality}</span>
+                                                <span>{member.membershipId}</span>
                                             </td>
                                             <td className="py-3 px-6 text-center">
-                                                <span>{member.country}</span>
+                                                <span>{member.group}</span>
                                             </td>
                                             <td className="py-3 px-6 text-center">
                                                 {
@@ -152,6 +152,7 @@ const MemberList = () => {
             <MemberDetail
                 toggleEditModal={toggleEditModal}
                 itemDetails={itemDetails}
+                setItemDetails={setItemDetails}
                 isEditModalOpen={isEditModalOpen} />
             {
                 isEditModalOpen &&

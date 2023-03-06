@@ -4,15 +4,20 @@ import Swal from 'sweetalert2'
 // import Alert from './Alert';
 import ProgressBar from './ProgressBar';
 
-const MemberDetail = ({ toggleEditModal, itemDetails, isEditModalOpen }) => {
+const MemberDetail = ({ toggleEditModal, itemDetails, setItemDetails, isEditModalOpen }) => {
     const navigate = useNavigate();
     const refreshPage = () => {
         navigate(0);
     }
     // States for checking the errors
     const [submitted, setSubmitted] = useState(false);
-    // const [error, setError] = useState(false);
-    // const [alertMsg, setAlertMsg] = useState({ msg: '', color: '' });
+
+    const handleMembershipIdChange = (e) => {
+        setItemDetails({
+            ...itemDetails,
+            membershipId: e.target.value
+        });
+    }
 
     // Handling the form submission
     const handleApprove = (e) => {
@@ -35,7 +40,7 @@ const MemberDetail = ({ toggleEditModal, itemDetails, isEditModalOpen }) => {
             // Redirect the user to login page if status == 401
             if (status === 401) {
                 // redirect to login page
-                navigate("/login");
+                navigate("/");
                 return false;
             }
             // check if there is an error in the response
@@ -53,13 +58,81 @@ const MemberDetail = ({ toggleEditModal, itemDetails, isEditModalOpen }) => {
         })();
     }
 
+    const handleUpdateId = (e) => {
+        e.preventDefault();
+        // send a patch request to the server to update memeber ID
+        (async () => {
+            const rawResponse = await fetch('/api/admin/update-id-member', {
+                method: 'PATCH',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    memberId: itemDetails._id,
+                    membershipId: itemDetails.membershipId
+                })
+            });
+            const content = await rawResponse.json();
+            const status = rawResponse.status;
+            // Redirect the user to login page if status == 401
+            if (status === 401) {
+                // redirect to login page
+                navigate("/");
+                return false;
+            }
+            // check if there is an error in the response
+            if (content.error) {
+                alert(content.message);
+            } else {
+                Swal.fire({
+                    title: 'Info!',
+                    text: "Updated!",
+                    icon: 'info',
+                    confirmButtonText: 'Ok'
+                });
+                refreshPage();
+            }
+        })();
+    }
+
+    const handleUpdateGroup = (e) => {
+        // send a patch request to the server to update memeber group
+        (async () => {
+            const rawResponse = await fetch('/api/admin/update-group-member', {
+                method: 'PATCH',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    memberId: itemDetails._id,
+                    membergroup: e.target.value
+                })
+            });
+            const content = await rawResponse.json();
+            const status = rawResponse.status;
+            // Redirect the user to login page if status == 401
+            if (status === 401) {
+                // redirect to login page
+                navigate("/");
+                return false;
+            }
+            // check if there is an error in the response
+            if (content.error) {
+                alert(content.message);
+            } else {
+            }
+        })();
+    }
+
     const handleDeleteItem = (_id) => {
         // make user confirm delete before proceeding
         if (!window.confirm('Are you sure you want to delete this account?')) {
             // exit function if false
             return false;
         }
-        
+
         // delete memeber from server
         // send a delete request to the server to delete memeber
         (async () => {
@@ -76,7 +149,7 @@ const MemberDetail = ({ toggleEditModal, itemDetails, isEditModalOpen }) => {
             // Redirect the user to login page if status == 401
             if (status === 401) {
                 // redirect to login page
-                navigate("/login");
+                navigate("/");
                 return false;
             }
             // check if there is an error in the response
@@ -106,7 +179,7 @@ const MemberDetail = ({ toggleEditModal, itemDetails, isEditModalOpen }) => {
                         </button>
                         <div className="flex flex-col gap-5">
                             <div className="flex flex-wrap items-center gap-2">
-                                <span className="font-semibold">(#{itemDetails._id})</span>
+                                <span className="font-semibold">{itemDetails.membershipId}</span>
                                 <div className="flex items-center gap-2">
                                     <span className="text-slate-400 text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 inline m-1" fill="currentColor" viewBox="0 0 16 16">
@@ -186,6 +259,27 @@ const MemberDetail = ({ toggleEditModal, itemDetails, isEditModalOpen }) => {
                                                     <div className="px-4 py-2 font-semibold">Country or Residence</div>
                                                     <div className="px-4 py-2">{itemDetails.country}</div>
                                                 </div>
+                                            </div>
+                                            <hr className="my-2" />
+                                            <div className="md:flex md:flex-row md:space-x-4 w-full text-xs my-4">
+                                                <div className="w-full flex flex-col mb-3">
+                                                    <label className="font-semibold text-gray-600 py-2">Membership Id</label>
+                                                    <input onChange={handleMembershipIdChange} value={itemDetails.membershipId} placeholder="Member Id" className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4" type="text" name="membershipId" />
+                                                </div>
+
+                                                <div className="w-full flex flex-col mb-3">
+                                                    <label className="font-semibold text-gray-600 py-2">Group</label>
+                                                    <select onChange={handleUpdateGroup} className="block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4 md:w-full " required="required" name="group">
+                                                        <option value="">Select member group</option>
+                                                        <option value="Kingdom of God">Kingdom of God</option>
+                                                        <option value="Rightousness">Rightousness</option>
+                                                        <option value="Shalom">Shalom</option>
+                                                    </select>
+                                                    <p className="text-sm text-red-500 hidden mt-3" id="error">Please fill out this field.</p>
+                                                </div>
+                                                <button onClick={handleUpdateId} className={`w-max bg-green-900 text-white uppercase font-bold rounded-lg p-2 m-2 pt-[-10px]`} href="/#">
+                                                    <span className="text-center">Update</span>
+                                                </button>
                                             </div>
                                         </div>
 

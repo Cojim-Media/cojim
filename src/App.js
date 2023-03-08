@@ -32,6 +32,7 @@ import MemberMakePayment from 'navPages/MemberMakePayment';
 import PartnerMakePayment from 'navPages/PartnerMakePayment';
 import MemberPaymentList from 'navPages/MemberPaymentList';
 import MediaUpload from 'navPages/MediaUpload';
+import PrayerLineFrom from 'navPages/PrayerLineFrom';
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
           <Route path="/partnership" exact element={<Partnership />} />
           <Route path="/partner/login" exact element={<PartnerLogin />} />
           <Route path="/admin/login" exact element={<AdminLogin />} />
+          <Route path="/prayer-line-form" exact element={<PrayerLineFrom />} />
           <Route path="dashboard/" element={<DashboardLayout />}>
             <Route index element={<Overview />} />
             <Route path="overview" element={<Overview />} />

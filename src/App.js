@@ -9,34 +9,33 @@ import Media from './navPages/media/Media';
 import Give from './navPages/give/Give';
 import Local from './navPages/give/local/Local';
 import International from './navPages/give/International';
-// import Inter from './navPages/give/inter/Inter';
-// import Partner from './navPages/partner/Partner';
 import Gallery from './navPages/galery/Gallery';
 import ContactUs from 'navPages/ContactUs';
 import NotFound from 'navPages/NotFound';
 import Partnership from 'navPages/partnership/Partnership';
 import PartnerLogin from 'navPages/PartnerLogin';
-import AdminLogin from 'navPages/AdminLogin';
+import AdminLogin from 'navPages/admin/AdminLogin';
 import DashboardLayout from 'navPages/DashboardLayout';
-import Overview from 'navPages/Overview';
-import AdminSettings from 'navPages/AdminSettings';
-import PartnersList from 'navPages/PartnerList';
-import UnconfirmedPayments from 'navPages/UnconfirmedPayments';
+import Overview from 'navPages/admin/Overview';
+import AdminSettings from 'navPages/admin/AdminSettings';
+import PartnersList from 'navPages/admin/PartnerList';
+import UnconfirmedPayments from 'navPages/admin/UnconfirmedPayments';
 import Profile from 'navPages/Profile';
-import PartnerPaymentList from 'navPages/PartnerPaymentList';
+import PartnerPaymentList from 'navPages/admin/PartnerPaymentList';
 import GlobalPayReceipt from 'navPages/GlobalPayReceipt';
 import Membership from 'navPages/Membership';
 import MemberLogin from 'navPages/MemberLogin';
-import MemberList from 'navPages/MemberList';
+import MemberList from 'navPages/admin/MemberList';
 import MemberMakePayment from 'navPages/MemberMakePayment';
 import PartnerMakePayment from 'navPages/PartnerMakePayment';
 import MemberPaymentList from 'navPages/MemberPaymentList';
-import MediaUpload from 'navPages/MediaUpload';
+import MediaUpload from 'navPages/admin/MediaUpload';
 import PrayerLineFrom from 'navPages/PrayerLineFrom';
-import PrayerLineList from 'navPages/PrayerLineList';
-import ShopList from 'navPages/ShopList';
-import Cart from 'navPages/Cart';
-import Checkout from 'navPages/Checkout';
+import PrayerLineList from 'navPages/admin/PrayerLineList';
+import ShopList from 'navPages/shop/ShopList';
+import Cart from 'navPages/shop/Cart';
+import Checkout from 'navPages/shop/Checkout';
+import AddProduct from 'navPages/admin/AddProduct';
 
 function App() {
   return (
@@ -68,12 +67,13 @@ function App() {
             <Route path="members-list" element={<MemberList />} />
             <Route path="unconfirmed-payments" element={<UnconfirmedPayments />} />
             <Route path="media-upload" element={<MediaUpload />} />
+            <Route path="prayer-line-list" element={<PrayerLineList />} />
+            <Route path="add-product" element={<AddProduct />} />
             <Route path="profile" element={<Profile />} />
             <Route path="partner-payment-list/:partnerId" element={<PartnerPaymentList />} />
             <Route path="member-payment-list/:memberId" element={<MemberPaymentList />} />
             <Route path="partner-make-payment" element={<PartnerMakePayment />} />
             <Route path="member-make-payment" element={<MemberMakePayment />} />
-            <Route path="prayer-line-list" element={<PrayerLineList />} />
           </Route>
           <Route path="/shop" element={<ShopList />} />
           <Route path="/cart" element={<Cart />} />

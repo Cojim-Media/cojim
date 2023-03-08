@@ -35,7 +35,8 @@ import PrayerLineList from 'navPages/admin/PrayerLineList';
 import ShopList from 'navPages/shop/ShopList';
 import Cart from 'navPages/shop/Cart';
 import Checkout from 'navPages/shop/Checkout';
-import AddProduct from 'navPages/admin/AddProduct';
+import AddProduct from 'navPages/shop/AddProduct';
+import ListProduct from 'navPages/shop/ListProduct';
 
 function App() {
   return (
@@ -69,6 +70,7 @@ function App() {
             <Route path="media-upload" element={<MediaUpload />} />
             <Route path="prayer-line-list" element={<PrayerLineList />} />
             <Route path="add-product" element={<AddProduct />} />
+            <Route path="product-list" element={<ListProduct />} />
             <Route path="profile" element={<Profile />} />
             <Route path="partner-payment-list/:partnerId" element={<PartnerPaymentList />} />
             <Route path="member-payment-list/:memberId" element={<MemberPaymentList />} />

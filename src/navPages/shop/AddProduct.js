@@ -47,44 +47,46 @@ const AddProduct = () => {
             formInputData.sellingPrice === '' || formInputData.quantity === '') {
             setErroMsg("Please fill all the required fields");
             setError(true);
-        } else {
-            setError(false);
-            setSubmitted(true);
-
-            // send form data as post request to the server
-            (async () => {
-                const rawResponse = await fetch('/api/products', {
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        ...formInputData,
-                        thumbnailFile: thumbnailFileReaderResult,
-                    })
-                });
-                const content = await rawResponse.json();
-                // stop the progress bar
-                setSubmitted(false);
-                // check if there is an error in the response
-                if (content.error) {
-                    setErroMsg(content.message);
-                    setError(true);
-                } else {
-                    setFormInputData({
-                        ...formInputData,
-                        productName: '', description: '', category: '', language: '', sellingPrice: '', quantity: '',
-                        unitOfMeasurement: '', status: 'available'
-                    });
-                    Swal.fire({
-                        title: 'Success!',
-                        text: content.message,
-                        icon: 'success',
-                        confirmButtonText: 'Ok'
-                    });
-                }
-            })();
+            return false;
         }
+
+        setError(false);
+        setSubmitted(true);
+
+        // send form data as post request to the server
+        (async () => {
+            const rawResponse = await fetch('/api/product/add-product', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    ...formInputData,
+                    thumbnailFile: thumbnailFileReaderResult,
+                })
+            });
+            const content = await rawResponse.json();
+            // stop the progress bar
+            setSubmitted(false);
+            // check if there is an error in the response
+            if (content.error) {
+                setErroMsg(content.message);
+                setError(true);
+            } else {
+                setFormInputData({
+                    ...formInputData,
+                    productName: '', description: '', category: '', language: '', sellingPrice: '', quantity: '',
+                    unitOfMeasurement: '', status: 'available'
+                });
+                Swal.fire({
+                    title: 'Success!',
+                    text: content.message,
+                    icon: 'success',
+                    confirmButtonText: 'Ok'
+                });
+            }
+        })();
     }
 
     useEffect(() => {
@@ -169,12 +171,12 @@ const AddProduct = () => {
                                 </div>
                                 <div className="w-full flex flex-col mb-3">
                                     <label className="font-semibold text-gray-600 py-2">Category</label>
-                                    <select onChange={handleFormInput} className="block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4 md:w-full " required="required" name="categoryId">
+                                    <select onChange={handleFormInput} className="block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4 md:w-full " required="required" name="category">
                                         <option value="">Select or type to search categories</option>
-                                        <option value="">Video</option>
-                                        <option value="">Audio</option>
-                                        <option value="">Books</option>
-                                        <option value="">Others</option>
+                                        <option value="video">Video</option>
+                                        <option value="audio">Audio</option>
+                                        <option value="books">Books</option>
+                                        <option value="others">Others</option>
                                     </select>
                                     <p className="text-sm text-red-500 hidden mt-3" id="error">Please fill out this field.</p>
                                 </div>

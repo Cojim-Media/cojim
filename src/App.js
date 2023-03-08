@@ -33,6 +33,7 @@ import PartnerMakePayment from 'navPages/PartnerMakePayment';
 import MemberPaymentList from 'navPages/MemberPaymentList';
 import MediaUpload from 'navPages/MediaUpload';
 import PrayerLineFrom from 'navPages/PrayerLineFrom';
+import PrayerLineList from 'navPages/PrayerLineList';
 
 function App() {
   return (
@@ -69,6 +70,7 @@ function App() {
             <Route path="member-payment-list/:memberId" element={<MemberPaymentList />} />
             <Route path="partner-make-payment" element={<PartnerMakePayment />} />
             <Route path="member-make-payment" element={<MemberMakePayment />} />
+            <Route path="prayer-line-list" element={<PrayerLineList />} />
           </Route>
           <Route path="/verify-globalpay" exact element={<GlobalPayReceipt />} />
           <Route path="*" element={<NotFound />} />

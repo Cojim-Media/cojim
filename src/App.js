@@ -34,6 +34,9 @@ import MemberPaymentList from 'navPages/MemberPaymentList';
 import MediaUpload from 'navPages/MediaUpload';
 import PrayerLineFrom from 'navPages/PrayerLineFrom';
 import PrayerLineList from 'navPages/PrayerLineList';
+import ShopList from 'navPages/ShopList';
+import Cart from 'navPages/Cart';
+import Checkout from 'navPages/Checkout';
 
 function App() {
   return (
@@ -41,26 +44,26 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route path="/about" exact element={<About />} />
-          <Route path="/contact" exact element={<ContactUs />} />
-          <Route path="/sermon" exact element={<Sermons />} />
-          <Route path="/events" exact element={<Events />} />
-          <Route path="/logif" exact element={<Logif />} />
-          <Route path="/media" exact element={<Media />} />
-          <Route path="/give" exact element={<Give />} />
-          <Route path="/local" exact element={<Local />} />
-          <Route path="/inter" exact element={<International />} />
-          <Route path="/gallery" exact element={<Gallery />} />
-          <Route path="/membership" exact element={<Membership />} />
-          <Route path="/member/login" exact element={<MemberLogin />} />
-          <Route path="/partnership" exact element={<Partnership />} />
-          <Route path="/partner/login" exact element={<PartnerLogin />} />
-          <Route path="/admin/login" exact element={<AdminLogin />} />
-          <Route path="/prayer-line-form" exact element={<PrayerLineFrom />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/sermon" element={<Sermons />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/logif" element={<Logif />} />
+          <Route path="/media" element={<Media />} />
+          <Route path="/give" element={<Give />} />
+          <Route path="/local" element={<Local />} />
+          <Route path="/inter" element={<International />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/membership" element={<Membership />} />
+          <Route path="/member/login" element={<MemberLogin />} />
+          <Route path="/partnership" element={<Partnership />} />
+          <Route path="/partner/login" element={<PartnerLogin />} />
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/prayer-line-form" element={<PrayerLineFrom />} />
           <Route path="dashboard/" element={<DashboardLayout />}>
             <Route index element={<Overview />} />
             <Route path="overview" element={<Overview />} />
-            <Route path="settings" exact element={<AdminSettings />} />
+            <Route path="settings" element={<AdminSettings />} />
             <Route path="partners-list" element={<PartnersList />} />
             <Route path="members-list" element={<MemberList />} />
             <Route path="unconfirmed-payments" element={<UnconfirmedPayments />} />
@@ -72,7 +75,10 @@ function App() {
             <Route path="member-make-payment" element={<MemberMakePayment />} />
             <Route path="prayer-line-list" element={<PrayerLineList />} />
           </Route>
-          <Route path="/verify-globalpay" exact element={<GlobalPayReceipt />} />
+          <Route path="/shop" element={<ShopList />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/verify-globalpay" element={<GlobalPayReceipt />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>

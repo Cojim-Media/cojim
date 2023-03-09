@@ -142,7 +142,7 @@ const UnconfirmedPayments = () => {
                                                         Confirm
                                                     </button>
                                                     <button onClick={() => toggleEditModal(payment)} className="bg-blue-600 text-white rounded-lg px-3 py-2 font-bold text-xs drop-shadow-lg" aria-label="Edit">
-                                                        More Details
+                                                        View Receipt
                                                     </button>
                                                 </div>
                                             </td>
@@ -201,7 +201,7 @@ const UnconfirmedPayments = () => {
                                                         Confirm
                                                     </button>
                                                     <button onClick={() => toggleEditModal(payment)} className="bg-blue-600 text-white rounded-lg px-3 py-2 font-bold text-xs drop-shadow-lg" aria-label="Edit">
-                                                        More Details
+                                                        View Receipt
                                                     </button>
                                                 </div>
                                             </td>

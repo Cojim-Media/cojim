@@ -294,8 +294,8 @@ const Membership = () => {
                                     8. Thanksgiving/Maintenance fees
                                 </li>
                                 <li className="mb-3 text-gray-500">
-                                    9. Note: These freewill donations are offered to God, His children and His work.
-                                    Therefore, it is not refundable.
+                                    9. Note: These freewill donations are offered to God, His children and His works.
+                                    Therefore, they are not refundable.
                                 </li>
                             </ul>
 

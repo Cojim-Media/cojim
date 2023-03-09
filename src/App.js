@@ -2,14 +2,10 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Home';
 import About from './navPages/about us/About';
-import Sermons from './navPages/sermons/Sermons';
-import Events from './navPages/events/Events';
-import Logif from './navPages/logif/Logif';
 import Media from './navPages/media/Media';
 import Give from './navPages/give/Give';
 import Local from './navPages/give/local/Local';
 import International from './navPages/give/International';
-import Gallery from './navPages/galery/Gallery';
 import ContactUs from 'navPages/ContactUs';
 import NotFound from 'navPages/NotFound';
 import Partnership from 'navPages/partnership/Partnership';
@@ -37,6 +33,10 @@ import Cart from 'navPages/shop/Cart';
 import AddProduct from 'navPages/shop/AddProduct';
 import ListProduct from 'navPages/shop/ListProduct';
 import Sales from 'navPages/admin/Sales';
+import TermAndCondition from 'navPages/TermAndCondition';
+import RefundPolicy from 'navPages/RefundPolicy';
+import ReturnPolicy from 'navPages/ReturnPolicy';
+import CancellationPolicy from 'navPages/CancellationPolicy';
 
 function App() {
   return (
@@ -46,14 +46,10 @@ function App() {
           <Route path="/" exact element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<ContactUs />} />
-          <Route path="/sermon" element={<Sermons />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/logif" element={<Logif />} />
           <Route path="/media" element={<Media />} />
           <Route path="/give" element={<Give />} />
           <Route path="/local" element={<Local />} />
           <Route path="/inter" element={<International />} />
-          <Route path="/gallery" element={<Gallery />} />
           <Route path="/membership" element={<Membership />} />
           <Route path="/member/login" element={<MemberLogin />} />
           <Route path="/partnership" element={<Partnership />} />
@@ -80,6 +76,10 @@ function App() {
           </Route>
           <Route path="/shop" element={<ShopList />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/term-and-condition" element={<TermAndCondition />} />
+          <Route path="/refund-policy" element={<RefundPolicy />} />
+          <Route path="/return-policy" element={<ReturnPolicy />} />
+          <Route path="/cancellation-policy" element={<CancellationPolicy />} />
           <Route path="/verify-globalpay" element={<GlobalPayReceipt />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

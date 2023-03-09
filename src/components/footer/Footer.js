@@ -5,10 +5,10 @@ const Footer = () => {
     <>
       <footer className="bg-white md:flex md:items-center md:justify-between shadow rounded-lg p-4 md:p-6 xl:p-8">
         <ul className="flex items-center flex-wrap mb-6 md:mb-0">
-          <li><a href="/#" className="text-sm font-normal text-gray-500 hover:underline mr-4 md:mr-6">Terms and conditions</a></li>
-          <li><a href="/#" className="text-sm font-normal text-gray-500 hover:underline mr-4 md:mr-6">Return Policy</a></li>
-          <li><a href="/#" className="text-sm font-normal text-gray-500 hover:underline mr-4 md:mr-6">Refund Policy</a></li>
-          <li><a href="/#" className="text-sm font-normal text-gray-500 hover:underline mr-4 md:mr-6">Cancellation Policy</a></li>
+          <li><a href="/term-and-condition" className="text-sm font-normal text-gray-500 hover:underline mr-4 md:mr-6">Terms and conditions</a></li>
+          <li><a href="/return-policy" className="text-sm font-normal text-gray-500 hover:underline mr-4 md:mr-6">Return Policy</a></li>
+          <li><a href="/refund-policy" className="text-sm font-normal text-gray-500 hover:underline mr-4 md:mr-6">Refund Policy</a></li>
+          <li><a href="/cancellation-policy" className="text-sm font-normal text-gray-500 hover:underline mr-4 md:mr-6">Cancellation Policy</a></li>
           <li><a href="/contact" className="text-sm font-normal text-gray-500 hover:underline">Contact</a></li>
         </ul>
         <div className="flex sm:justify-center space-x-6">

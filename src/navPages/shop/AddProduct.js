@@ -79,11 +79,6 @@ const AddProduct = () => {
                 setErroMsg(content.message);
                 setError(true);
             } else {
-                setFormInputData({
-                    ...formInputData,
-                    productName: '', description: '', category: '', language: '', sellingPrice: '', quantity: '',
-                    unitOfMeasurement: '', status: 'available'
-                });
                 Swal.fire({
                     title: 'Success!',
                     text: content.message,

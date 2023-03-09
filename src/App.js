@@ -34,9 +34,9 @@ import PrayerLineFrom from 'navPages/PrayerLineFrom';
 import PrayerLineList from 'navPages/admin/PrayerLineList';
 import ShopList from 'navPages/shop/ShopList';
 import Cart from 'navPages/shop/Cart';
-import Checkout from 'navPages/shop/Checkout';
 import AddProduct from 'navPages/shop/AddProduct';
 import ListProduct from 'navPages/shop/ListProduct';
+import Sales from 'navPages/admin/Sales';
 
 function App() {
   return (
@@ -71,6 +71,7 @@ function App() {
             <Route path="prayer-line-list" element={<PrayerLineList />} />
             <Route path="add-product" element={<AddProduct />} />
             <Route path="product-list" element={<ListProduct />} />
+            <Route path="orders" element={<Sales />} />
             <Route path="profile" element={<Profile />} />
             <Route path="partner-payment-list/:partnerId" element={<PartnerPaymentList />} />
             <Route path="member-payment-list/:memberId" element={<MemberPaymentList />} />
@@ -79,7 +80,6 @@ function App() {
           </Route>
           <Route path="/shop" element={<ShopList />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/checkout" element={<Checkout />} />
           <Route path="/verify-globalpay" element={<GlobalPayReceipt />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

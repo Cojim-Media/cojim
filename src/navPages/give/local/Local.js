@@ -138,7 +138,7 @@ const Local = () => {
             <li>Tithe.</li>
           </ul>
 
-          <p>All Donors Must send Proof of payment to the following;</p>
+          <p>All Donors Must send Proof of donation to the following;</p>
 
           <p>Email : donations@cojim.org</p>
           <p>
@@ -149,7 +149,7 @@ const Local = () => {
           </p>
 
           <p className="note">
-            Please state the purpose of your donation on the payment slip or the
+            Please state the purpose of your donation on the donation slip or the
             comment/note section of your bank transfer app.
           </p>
 
@@ -168,7 +168,7 @@ const Local = () => {
                 method="POST"
               >
                 <div className="mb-5">
-                  Pay with <img alt="Globay Pay" src="https://demo.globalpay.com.ng/GlobalPayAPI/img/globalpay.jpg" className="w-20 h-4" />
+                  Donate with <img alt="Globay Pay" src="https://demo.globalpay.com.ng/GlobalPayAPI/img/globalpay.jpg" className="w-20 h-4" />
                   <label
                     htmlFor="email"
                     className="mb-3 block text-base font-medium text-[#07074D]"
@@ -220,7 +220,7 @@ const Local = () => {
                   <button
                     className="hover:shadow-form w-full rounded-md bg-primary py-3 px-8 text-center text-base font-semibold text-white outline-none"
                   >
-                    Pay Now
+                    Donate Now
                   </button>
                 </div>
               </form>
@@ -229,7 +229,7 @@ const Local = () => {
         </div>
         {/* <div className="paystack">
             <div className="pay-form">
-              <h2>Pay with PayStack</h2>
+              <h2>Donate with PayStack</h2>
               <div className="pay-input">
                 <label htmlFor="email">Email:</label>
                 <input

@@ -76,7 +76,7 @@ const PrayerLineFrom = () => {
             setSubmitted(false);
             Swal.fire({
                 title: 'Error!',
-                text: 'Please upload payment receipt to continue',
+                text: 'Please upload medical report document to continue',
                 icon: 'error',
                 confirmButtonText: 'Ok'
             });
@@ -87,7 +87,7 @@ const PrayerLineFrom = () => {
             setSubmitted(false);
             Swal.fire({
                 title: 'Error!',
-                text: 'Please upload payment receipt to continue',
+                text: 'Please upload HIV/AIDS test to continue',
                 icon: 'error',
                 confirmButtonText: 'Ok'
             });
@@ -188,91 +188,91 @@ const PrayerLineFrom = () => {
     return (
         <>
             <Navbar />
-            <div class="flex items-center justify-center bg-gray-100">
-                <div class="px-8 py-6 mx-4 mt-4 text-left bg-white shadow-lg md:w-1/3 lg:w-1/3 sm:w-1/3">
-                    <h3 class="text-xl font-bold text-center">COJIM PRAYER LINE REGISTRATION FORM</h3>
+            <div className="flex items-center justify-center bg-gray-100">
+                <div className="px-8 py-6 mx-4 mt-4 text-left bg-white shadow-lg md:w-1/3 lg:w-1/3 sm:w-1/3">
+                    <h3 className="text-xl font-bold text-center">COJIM PRAYER LINE REGISTRATION FORM</h3>
                     <div>
-                        <div class="flex -mx-3">
-                            <div class="w-full px-3 mb-5">
-                                <label for="" class="text-xs font-semibold px-1">Full Name</label>
-                                <div class="flex">
-                                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
-                                    <input onChange={handleFormInput} value={formInputData['fullname']} name="fullname" type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" />
+                        <div className="flex -mx-3">
+                            <div className="w-full px-3 mb-5">
+                                <label for="" className="text-xs font-semibold px-1">Full Name</label>
+                                <div className="flex">
+                                    <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
+                                    <input onChange={handleFormInput} value={formInputData['fullname']} name="fullname" type="text" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" />
                                 </div>
                             </div>
                         </div>
 
-                        <div class="flex -mx-3">
-                            <div class="w-1/2 px-3 mb-5">
-                                <label for="" class="text-xs font-semibold px-1">Age</label>
-                                <div class="flex">
-                                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                    <input onChange={handleFormInput} value={formInputData['age']} name="age" type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Age" />
+                        <div className="flex -mx-3">
+                            <div className="w-1/2 px-3 mb-5">
+                                <label for="" className="text-xs font-semibold px-1">Age</label>
+                                <div className="flex">
+                                    <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
+                                    <input onChange={handleFormInput} value={formInputData['age']} name="age" type="text" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Age" />
                                 </div>
                             </div>
-                            <div class="w-1/2 px-3 mb-5">
-                                <label for="" class="text-xs font-semibold px-1">State/Province</label>
-                                <div class="flex">
-                                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                    <input onChange={handleFormInput} value={formInputData['state']} name="state" type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="flex -mx-3">
-                            <div class="w-1/2 px-3 mb-5">
-                                <label for="" class="text-xs font-semibold px-1">Nationality</label>
-                                <div class="flex">
-                                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                    <input onChange={handleFormInput} value={formInputData['nationality']} name="nationality" type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" />
-                                </div>
-                            </div>
-                            <div class="w-1/2 px-3 mb-5">
-                                <label for="" class="text-xs font-semibold px-1">Country of Resident</label>
-                                <div class="flex">
-                                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                    <input onChange={handleFormInput} value={formInputData['country']} name="country" type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" />
+                            <div className="w-1/2 px-3 mb-5">
+                                <label for="" className="text-xs font-semibold px-1">State/Province</label>
+                                <div className="flex">
+                                    <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
+                                    <input onChange={handleFormInput} value={formInputData['state']} name="state" type="text" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" />
                                 </div>
                             </div>
                         </div>
 
-                        <div class="flex -mx-3">
-                            <div class="w-full px-3 mb-5">
-                                <label for="" class="text-xs font-semibold px-1">Occupation</label>
-                                <div class="flex">
-                                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
-                                    <input onChange={handleFormInput} value={formInputData['occupation']} name="occupation" type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" />
+                        <div className="flex -mx-3">
+                            <div className="w-1/2 px-3 mb-5">
+                                <label for="" className="text-xs font-semibold px-1">Nationality</label>
+                                <div className="flex">
+                                    <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
+                                    <input onChange={handleFormInput} value={formInputData['nationality']} name="nationality" type="text" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" />
+                                </div>
+                            </div>
+                            <div className="w-1/2 px-3 mb-5">
+                                <label for="" className="text-xs font-semibold px-1">Country of Resident</label>
+                                <div className="flex">
+                                    <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
+                                    <input onChange={handleFormInput} value={formInputData['country']} name="country" type="text" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" />
                                 </div>
                             </div>
                         </div>
 
-                        <div class="flex -mx-3">
-                            <div class="w-full px-3 mb-5">
-                                <label for="" class="text-xs font-semibold px-1">Telephone Number/Fax</label>
-                                <div class="flex">
-                                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
-                                    <input onChange={handleFormInput} value={formInputData['phone']} name="phone" type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" />
+                        <div className="flex -mx-3">
+                            <div className="w-full px-3 mb-5">
+                                <label for="" className="text-xs font-semibold px-1">Occupation</label>
+                                <div className="flex">
+                                    <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
+                                    <input onChange={handleFormInput} value={formInputData['occupation']} name="occupation" type="text" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" />
                                 </div>
                             </div>
                         </div>
 
-                        <div class="flex -mx-3">
-                            <div class="w-full px-3 mb-5">
-                                <label for="" class="text-xs font-semibold px-1">Email</label>
-                                <div class="flex">
-                                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
-                                    <input onChange={handleFormInput} value={formInputData['email']} name="email" type="email" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" />
+                        <div className="flex -mx-3">
+                            <div className="w-full px-3 mb-5">
+                                <label for="" className="text-xs font-semibold px-1">Telephone Number/Fax</label>
+                                <div className="flex">
+                                    <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
+                                    <input onChange={handleFormInput} value={formInputData['phone']} name="phone" type="text" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" />
                                 </div>
                             </div>
                         </div>
 
-                        <div class="flex -mx-3">
-                            <div class="w-full px-3 mb-5">
-                                <label for="" class="text-xs font-semibold px-1">
+                        <div className="flex -mx-3">
+                            <div className="w-full px-3 mb-5">
+                                <label for="" className="text-xs font-semibold px-1">Email</label>
+                                <div className="flex">
+                                    <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
+                                    <input onChange={handleFormInput} value={formInputData['email']} name="email" type="email" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="flex -mx-3">
+                            <div className="w-full px-3 mb-5">
+                                <label for="" className="text-xs font-semibold px-1">
                                     Select Prayer Type
                                 </label>
-                                <div class="flex">
-                                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
+                                <div className="flex">
+                                    <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
                                     <select onChange={handleSelectPrayerType} name="prayerType" data-te-select-init>
                                         <option value="">Select</option>
                                         <option value="healing">Healing</option>
@@ -285,14 +285,14 @@ const PrayerLineFrom = () => {
                         {
                             (prayerType === 'healing') ?
                                 <>
-                                    <div class="flex -mx-3">
-                                        <div class="w-full px-3 mb-5">
-                                            <label for="" class="text-xs font-semibold px-1">
+                                    <div className="flex -mx-3">
+                                        <div className="w-full px-3 mb-5">
+                                            <label for="" className="text-xs font-semibold px-1">
                                                 Current Medical Reports From Government Approved Hospital
                                                 (that shows the kind of sickness you have)
                                             </label>
-                                            <div class="flex">
-                                                <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
+                                            <div className="flex">
+                                                <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
                                                 <div
                                                     className="rounded-l-lg p-4 bg-gray-200 flex flex-col justify-center items-center border-0 border-r border-gray-300 ">
                                                     <label className="cursor-pointer hover:opacity-80 inline-flex items-center shadow-md my-2 px-2 py-2 bg-gray-900 text-gray-50 border border-transparent
@@ -322,13 +322,13 @@ const PrayerLineFrom = () => {
                                         </div>
                                     </div>
 
-                                    <div class="flex -mx-3">
-                                        <div class="w-full px-3 mb-5">
-                                            <label for="" class="text-xs font-semibold px-1">
+                                    <div className="flex -mx-3">
+                                        <div className="w-full px-3 mb-5">
+                                            <label for="" className="text-xs font-semibold px-1">
                                                 Confirmatory Test of HIV/AIDS From Government Recognized Hospital
                                             </label>
-                                            <div class="flex">
-                                                <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
+                                            <div className="flex">
+                                                <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
                                                 <div
                                                     className="rounded-l-lg p-4 bg-gray-200 flex flex-col justify-center items-center border-0 border-r border-gray-300 ">
                                                     <label className="cursor-pointer hover:opacity-80 inline-flex items-center shadow-md my-2 px-2 py-2 bg-gray-900 text-gray-50 border border-transparent
@@ -358,54 +358,59 @@ const PrayerLineFrom = () => {
                                         </div>
                                     </div>
 
-                                    <div class="flex -mx-3">
-                                        <div class="w-full px-3 mb-5">
-                                            <label for="" class="text-xs font-semibold px-1">
+                                    <div className="flex -mx-3">
+                                        <div className="w-full px-3 mb-5">
+                                            <label for="" className="text-xs font-semibold px-1">
                                                 Medical aid instructions e.g Lumber Corset,
                                                 Neck Culler, Inhealer, Wheelchair, Pair of Clutches,
                                                 Nebulizer etc.
                                             </label>
-                                            <div class="flex">
-                                                <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
+                                            <div className="flex">
+                                                <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
                                                 <textarea
                                                     name="medicalAid"
-                                                    class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
+                                                    className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
                                                     rows="3">
                                                 </textarea>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="flex -mx-3">
-                                        <div class="w-full px-3 mb-5">
-                                            <label for="" class="text-xs font-semibold px-1">
+                                    <div className="flex -mx-3">
+                                        <div className="w-full px-3 mb-5">
+                                            <label for="" className="text-xs font-semibold px-1">
                                                 Medication You're taking (if available)
                                             </label>
-                                            <div class="flex">
-                                                <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
-                                                <input onChange={handleFormInput} value={formInputData['medication']} name="medication" type="email" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" />
+                                            <div className="flex">
+                                                <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
+                                                <input onChange={handleFormInput} value={formInputData['medication']} name="medication" type="email" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" />
                                             </div>
                                         </div>
                                     </div>
 
-
+                                    <label for="" className="text-xs font-semibold px-1">
+                                        NOTE: THE ABOVE INFORMATION MUST BE CAPTURE IN SHORT CLIP VIDEO AND SENT 
+                                        TO COJIM PRAYER LINE EMAIL BELOW.
+                                        <br />
+                                        <a href="mailto:cojimprayerline@gmail.com" className="text-primary">cojimprayerline@gmail.com</a>
+                                    </label>
                                 </> :
                                 (prayerType === 'deliverance') ?
                                 <>
-                                    <label for="" class="text-xs font-semibold px-1">
+                                    <label for="" className="text-xs font-semibold px-1">
                                         IF YOU HAVE SPIRITUAL PROBLEMS RANGING FROM DEMONIC OPERATION, NIGHT MARES, EVIL ATTACKS, MOVING OBJECTS, MARITAL PROBLEMS LIKE DISAPPOINTMENTS IN MARRIAGE, FAILURE, GENERATIONAL COURSE  LIKE POVERTY, SUDDEN DEATH FROM THE FAMILY, ETC.
                                     </label>
                                 </> : ''
                         }
 
-                        <div class="flex -mx-3">
-                            <div class="w-full px-3 mb-5">
-                                <label for="" class="text-xs font-semibold px-1">
+                        <div className="flex mt-2 -mx-3">
+                            <div className="w-full px-3 mb-5">
+                                <label for="" className="text-xs font-semibold px-1">
                                     kindly state how long you have having the problem or problems
                                 </label>
-                                <div class="flex">
-                                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
-                                    <input onChange={handleFormInput} value={formInputData['problemDuration']} name="problemDuration" type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" />
+                                <div className="flex">
+                                    <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
+                                    <input onChange={handleFormInput} value={formInputData['problemDuration']} name="problemDuration" type="text" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" />
                                 </div>
                             </div>
                         </div>
@@ -419,9 +424,9 @@ const PrayerLineFrom = () => {
                             ) : ""
                         }
 
-                        <div class="flex -mx-3">
-                            <div class="w-full px-3 mb-5">
-                                <button onClick={handleSubmit} class="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold">SEND NOW</button>
+                        <div className="flex -mx-3">
+                            <div className="w-full px-3 mb-5">
+                                <button onClick={handleSubmit} className="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold">SEND NOW</button>
                             </div>
                         </div>
                     </div>

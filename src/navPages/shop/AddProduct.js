@@ -49,6 +49,12 @@ const AddProduct = () => {
             return false;
         }
 
+        if (thumbnailFile === product_placeholder) {
+            setErroMsg("Please select a product thumbnail");
+            setError(true);
+            return false;
+        }
+
         setError(false);
         setSubmitted(true);
 

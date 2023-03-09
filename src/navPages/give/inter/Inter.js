@@ -97,7 +97,7 @@ const Inter = () => {
               }`}
               onClick={() => setfilter('BANK')}
             >
-              BANK TRANSFERS
+              BANK DONATIONS
             </button>
             <button
               className={`bank-btn ${
@@ -171,13 +171,13 @@ const Inter = () => {
 
               <span>Purpose of donation - </span>
               <ul>
-                <li>LOGIF Partnership</li>
+                <li>CoJIM Partnership</li>
                 <li>Seed sowing/Offering</li>
                 <li>Tithe</li>
                 <li>Church building fund</li>
               </ul>
 
-              <p>All Donors Must send Proof of payment to the following;</p>
+              <p>All Donors Must send Proof of donation to the following;</p>
 
               <p>Email : donations@cojim.org</p>
               <p>
@@ -188,7 +188,7 @@ const Inter = () => {
               </p>
 
               <p className="note">
-                Please state the purpose of your donation on the payment slip or
+                Please state the purpose of your donation on the donation slip or
                 the comment/note section of your bank transfer app.
               </p>
             </div>
@@ -245,13 +245,13 @@ const Inter = () => {
                   onClick={paystack}
                   className="pay-sub"
                   type="submit"
-                  value="Pay to COJIM"
+                  value="Donate to COJIM"
                 />
                 <input
                   onClick={paystack2}
                   className="pay-sub"
                   type="submit"
-                  value="Pay to LOGIF"
+                  value="Donate to LOGIF"
                 />
               </div>
             </div>

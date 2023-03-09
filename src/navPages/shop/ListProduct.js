@@ -5,7 +5,6 @@ import ProgressBar from 'components/ProgressBar';
 import ProductEditModal from 'components/ProductEditModal';
 
 const ListProduct = () => {
- const baseUrl = `${window.location.origin}`;
     let navigate = useNavigate();
     const [itemDetails, setItemDetails] = useState({});
     const [isEditModalOpen, setIsEditModalOpen] = useState(false);
@@ -142,7 +141,7 @@ const ListProduct = () => {
                                             <td className="py-3 px-6 text-left">
                                                 <div className="flex items-center">
                                                     <div className="mr-2">
-                                                        <img alt="img" className="w-8 h-8 rounded-md"  src={`${product.thumbnailFile ? product.thumbnailFile.url : ''}`} />
+                                                        <img alt="img" className="w-8 h-8 rounded-md" src={`${product.thumbnailFile ? product.thumbnailFile.url : ''}`} />
                                                     </div>
                                                     <span>{product.productName}</span>
                                                 </div>

@@ -122,7 +122,7 @@ const MemberPaymentList = () => {
         {
           (Object.values(payments) === undefined || Object.values(payments).length === 0) ? (
             <>
-              <h3 className="text-center text-gray-600 p-4 text-lg">The list of all payments will appear here</h3>
+              <h3 className="text-center text-gray-600 p-4 text-lg">The list of all donations will appear here</h3>
               <div className="flex">
                 <img className="self-center mx-auto" src={waitingIllustration} alt="illustration" />
               </div>

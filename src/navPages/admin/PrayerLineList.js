@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import waitingIllustration from 'img/waiting-for-customer.svg';
-import MemberDetail from 'components/MemberDetail';
+import PrayerLineDetails from 'components/PrayerLineDetails';
 import ProgressBar from 'components/ProgressBar';
 
-const MemberList = () => {
+const PrayerLineList = () => {
     let navigate = useNavigate();
     const [itemDetails, setItemDetails] = useState({});
     const [isEditModalOpen, setIsEditModalOpen] = useState(false);
 
     const [isDataReady, setIsDataReady] = useState(false);
-    const [members, setMembers] = useState({});
+    const [partners, setPartners] = useState({});
 
     const [query, setQuery] = useState('');
     const handleSearchItem = (e) => {
@@ -23,11 +23,11 @@ const MemberList = () => {
         // open modal
         setIsEditModalOpen(!isEditModalOpen);
     }
-
+    
     useEffect(() => {
-        // send a get request to the server to fetch members
+        // send a get request to the server to fetch partners
         (async () => {
-            const rawResponse = await fetch(`/api/admin/members-list?query=${query}`, {
+            const rawResponse = await fetch(`/api/prayer-line/prayer-line-list?query=${query}`, {
                 method: 'GET',
             });
             const content = await rawResponse.json();
@@ -45,7 +45,7 @@ const MemberList = () => {
                 // update customers
                 const dataObj = {};
                 content.data.map(item => dataObj[item._id] = item)
-                setMembers({ ...dataObj });
+                setPartners({ ...dataObj });
                 // stop the progress bar
                 setIsDataReady(true);
             }
@@ -66,11 +66,11 @@ const MemberList = () => {
             <table className="min-w-max w-full table-auto">
                 <thead>
                     <tr className="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
-                        <th className="py-3 px-6 text-left">Name</th>
+                        <th className="py-3 px-6 text-left">Full Name</th>
                         <th className="py-3 px-6 text-left">Phone</th>
                         <th className="py-3 px-6 text-center">Email </th>
-                        <th className="py-3 px-6 text-center">Membership ID</th>
-                        <th className="py-3 px-6 text-center">Group</th>
+                        <th className="py-3 px-6 text-center">County of Residence</th>
+                        <th className="py-3 px-6 text-center">Prayer Type</th>
                         <th className="py-3 px-6 text-center">Status</th>
                         <th className="px-4 py-3">Actions</th>
                     </tr>
@@ -86,33 +86,32 @@ const MemberList = () => {
                             </tr>
                         ) : (
                             // If there is no customer yet, display a message
-                            !(Object.values(members) === undefined || Object.values(members).length === 0) ? (
-                                Object.values(members).map((member, index) => {
+                            !(Object.values(partners) === undefined || Object.values(partners).length === 0) ? (
+                                Object.values(partners).map((partner, index) => {
                                     return (
                                         <tr key={index} className="border-b border-gray-200 hover:bg-gray-100">
                                             <td className="py-3 px-6 text-left">
                                                 <div className="flex items-center">
-                                                    <div className="mr-2">
-                                                        <img alt="img" className="w-8 h-8 rounded-md" src={`${member.passportPhoto.url}`} />
-                                                    </div>
-                                                    <span>{member.firstname} {member.lastname}</span>
+                                                    <span>{partner.fullname}</span>
                                                 </div>
                                             </td>
                                             <td className="py-3 px-6 text-left">
-                                                <span>{member.phone}</span>
+                                                <span>{partner.phone}</span>
                                             </td>
                                             <td className="py-3 px-6 text-center">
-                                                <span>{member.email}</span>
+                                                <span>{partner.email}</span>
                                             </td>
                                             <td className="py-3 px-6 text-center">
-                                                <span>{member.membershipId}</span>
+                                                <span>{partner.country}</span>
                                             </td>
-                                            <td className="py-3 px-6 text-center">
-                                                <span>{member.group}</span>
+
+                                            <td className="py-3 px-6 text-center text-primary">
+                                                <span>{partner.prayerType.toUpperCase()}</span>
                                             </td>
+
                                             <td className="py-3 px-6 text-center">
                                                 {
-                                                    (member.reviewed) ? (
+                                                    (partner.reviewed) ? (
                                                         <span className="bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">Approved</span>
                                                     ) : (
                                                         <span className="bg-yellow-200 text-yellow-600 py-1 px-3 rounded-full text-xs">Pending</span>
@@ -123,7 +122,7 @@ const MemberList = () => {
 
                                             <td className="px-4 py-3">
                                                 <div className="flex items-center space-x-4 text-sm">
-                                                    <button onClick={() => toggleEditModal(member)} className="bg-blue-600 text-white rounded-lg px-3 py-2 font-bold text-xs drop-shadow-lg" aria-label="Edit">
+                                                    <button onClick={() => toggleEditModal(partner)} className="bg-blue-600 text-white rounded-lg px-3 py-2 font-bold text-xs drop-shadow-lg" aria-label="Edit">
                                                         More Details
                                                     </button>
                                                 </div>
@@ -139,9 +138,9 @@ const MemberList = () => {
                 </tbody>
             </table>
             {
-                (Object.values(members) === undefined || Object.values(members).length === 0) ? (
+                (Object.values(partners) === undefined || Object.values(partners).length === 0) ? (
                     <>
-                        <h3 className="text-center text-gray-600 p-4 text-lg">The list of all members will appear here</h3>
+                        <h3 className="text-center text-gray-600 p-4 text-lg">The list of all partners will appear here</h3>
                         <div className="flex">
                             <img className="self-center mx-auto" src={waitingIllustration} alt="illustration" />
                         </div>
@@ -149,10 +148,9 @@ const MemberList = () => {
                 ) : ''
             }
 
-            <MemberDetail
+            <PrayerLineDetails
                 toggleEditModal={toggleEditModal}
                 itemDetails={itemDetails}
-                setItemDetails={setItemDetails}
                 isEditModalOpen={isEditModalOpen} />
             {
                 isEditModalOpen &&
@@ -163,4 +161,4 @@ const MemberList = () => {
     )
 }
 
-export default MemberList;
+export default PrayerLineList;

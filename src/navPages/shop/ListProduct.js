@@ -12,7 +12,7 @@ const ListProduct = () => {
 
     // states for storing form data
     const [formInputData, setFormInputData] = useState({
-        productName: '', purchasedPrice: '', sellingPrice: '', quantity: ''
+        productName: '', description: '', sellingPrice: '', quantity: ''
     });
 
     const toggleEditModal = (itemDetails = {}) => {
@@ -21,7 +21,7 @@ const ListProduct = () => {
         // update (controlled) input data
         setFormInputData({
             productName: itemDetails.productName,
-            purchasedPrice: itemDetails.purchasedPrice,
+            description: itemDetails.description,
             sellingPrice: itemDetails.sellingPrice,
             quantity: itemDetails.quantity
         });
@@ -43,7 +43,7 @@ const ListProduct = () => {
         // delete product from server
         // send a delete request to the server to delete product
         (async () => {
-            const rawResponse = await fetch('/api/products', {
+            const rawResponse = await fetch('/api/product/delete-product', {
                 method: 'DELETE',
                 headers: {
                     'Accept': 'application/json',

@@ -34,7 +34,7 @@ const About = () => {
               <div className="basis-auto m-4 mb-6 md:mb-0 w-full px-3 lg:px-6">
                 <h2 className="text-3xl font-bold mb-6 text-primary">About us</h2>
                 <p className="text-gray-500 mb-6">
-                  God and His Word are one. God's Word represents His Heart's
+                  God and His Word are One. God's Word represents His Heart's
                   desire. Jesus is the Word by whom God speaks to us. The Holy
                   Spirit is the One who reveals Jesus to us.
                 </p>

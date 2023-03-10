@@ -271,7 +271,7 @@ const Partnership = () => {
 
                             <ul className="list-disc list-inside mt-2 ml-2">
                                 <li className="mb-3 text-gray-500">
-                                    1. Make God's word the foundation of your life by living a life that is without sins and sinful desires.
+                                    1. Make God's Word the Foundation of your life by living a life that is without sins and sinful desires.
                                 </li>
                                 <li className="mb-3 text-gray-500">
                                     2. Loving God, Jesus Christ and the Holy Spirit above all.
@@ -289,7 +289,7 @@ const Partnership = () => {
                                     5. Church building projects supports
                                 </li>
                                 <li className="mb-3 text-gray-500">
-                                    6. Seed Sowing
+                                    6. Seed sowing
                                 </li>
                                 <li className="mb-3 text-gray-500">
                                     7. Offerings

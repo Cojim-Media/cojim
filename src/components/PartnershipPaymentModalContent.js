@@ -303,7 +303,7 @@ const PartnershipPaymentModalContent = () => {
                   onClick={paystack2}
                   className="pay-sub rounded-lg"
                   type="submit"
-                  value="Pay to COJIM"
+                  value="Donate to COJIM"
                 />
               </div>
             </div>

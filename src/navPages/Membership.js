@@ -267,14 +267,14 @@ const Membership = () => {
 
                             <ul className="list-disc list-inside mt-2 ml-2">
                                 <li className="mb-3 text-gray-500">
-                                    1. Make God's word the foundation of life by living a life that is without sins and sinful desires.
+                                    1. Make God's Word the Foundation of your life by living a life that is without sins and sinful desires.
                                 </li>
                                 <li className="mb-3 text-gray-500">
                                     2. Loving God, Jesus Christ and the Holy Spirit above all.
                                 </li>
                                 <li className="mb-3 text-gray-500">
                                     3. Love and serve others: We believe that following Jesus means loving
-                                    and serving others, just as he did. We ask all members to strive to
+                                    and serving others, just as He did. We ask all members to strive to
                                     love their fellow human beings as themselves and to seek out opportunities
                                     to help those who are less privileged.
                                 </li>
@@ -285,7 +285,7 @@ const Membership = () => {
                                     5. Church building projects supports
                                 </li>
                                 <li className="mb-3 text-gray-500">
-                                    6. Seed Sowing
+                                    6. Seed sowing
                                 </li>
                                 <li className="mb-3 text-gray-500">
                                     7. Offerings

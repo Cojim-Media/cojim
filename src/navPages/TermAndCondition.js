@@ -9,7 +9,7 @@ const TermAndCondition = () => {
             <div class="container mx-auto py-8 px-4">
                 <h1 class="text-2xl font-bold mb-4">Terms and Conditions</h1>
                 <p class="mb-4">
-                    By accessing or using COJIM.org (the "Website"),
+                    By accessing or using cojim.org (the "Website"),
                     you agree to be bound by the following terms and conditions of use (the "Terms").
                     Please read these Terms carefully before using the Website.
                     If you do not agree to these Terms, you should not access or use the Website.
@@ -47,11 +47,12 @@ const TermAndCondition = () => {
                 </p>
                 <h2 class="text-xl font-bold mb-4">Prohibited Uses</h2>
                 <p class="mb-4">
-                    You may use the Website only for lawful purposes and in accordance with these Terms. You agree not to use the Website:
+                    You may use the Website only for lawful purposes and in accordance with these Terms. 
+                    You agree not to use the Website:
                 </p>
                 <ul class="list-disc ml-8 mb-4">
                     <li>
-                        In any way that violates any applicable federal, state, local, or international law or regulation
+                        In any way that violates any applicable Federal, State, Local, or International law or regulation
                     </li>
                     <li>
                         To engage in any conduct that restricts or inhibits anyone's use or enjoyment of the Website, or which, as determined by COJIM, may harm COJIM or users of the Website or expose them to liability
@@ -68,8 +69,6 @@ const TermAndCondition = () => {
                     WITHOUT ANY WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. COJIM DISCLAIMS ALL WARRANTIES,
                     EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY,
                     FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.
-                    COJIM DOES NOT WARRANT THAT THE WEBSITE WILL BE UNINTERRUPTED OR ERROR-FREE,
-                    THAT DEFECTS WILL BE COR
                 </p>
             </div>
             <Footer />

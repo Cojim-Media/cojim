@@ -118,7 +118,7 @@ const UnconfirmedPayments = () => {
                                             </td>
 
                                             <td className="py-3 px-6 text-center">
-                                                <span>{payment.partnerId.firstname} {payment.partnerId.lastname}</span>
+                                                <span>{payment.firstname} {payment.lastname}</span>
                                             </td>
 
                                             <td className="py-3 px-6 text-center">
@@ -177,7 +177,7 @@ const UnconfirmedPayments = () => {
                                             </td>
 
                                             <td className="py-3 px-6 text-center">
-                                                <span>{payment.memberId.firstname} {payment.memberId.lastname}</span>
+                                                <span>{payment.firstname} {payment.lastname}</span>
                                             </td>
 
                                             <td className="py-3 px-6 text-center">

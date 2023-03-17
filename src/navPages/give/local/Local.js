@@ -16,17 +16,17 @@ const Local = () => {
   // const [first, setfirst] = useState('');
   // const [last, setlast] = useState('');
 
-  const makeid = (length) => {
-    let result = '';
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    const charactersLength = characters.length;
-    let counter = 0;
-    while (counter < length) {
-      result += characters.charAt(Math.floor(Math.random() * charactersLength));
-      counter += 1;
-    }
-    return result;
-  }
+  // const makeid = (length) => {
+  //   let result = '';
+  //   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  //   const charactersLength = characters.length;
+  //   let counter = 0;
+  //   while (counter < length) {
+  //     result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  //     counter += 1;
+  //   }
+  //   return result;
+  // }
 
   // const paystack = (e) => {
   //   e.preventDefault();
@@ -159,7 +159,7 @@ const Local = () => {
         </div>
         {/* ONLINE PAYMENT */}
 
-        <div className="pay-form">
+        {/* <div className="pay-form">
           <div className="flex items-center justify-center p-12">
             <div className="mx-auto w-full max-w-[550px] bg-white">
               <form
@@ -226,7 +226,7 @@ const Local = () => {
               </form>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* <div className="paystack">
             <div className="pay-form">
               <h2>Donate with PayStack</h2>

@@ -1,5 +1,7 @@
-import './App.css';
+import React, {useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ReactGA from 'react-ga';
+import './App.css';
 import Home from './Home';
 import About from './navPages/about us/About';
 import Media from './navPages/media/Media';
@@ -37,8 +39,14 @@ import TermAndCondition from 'navPages/TermAndCondition';
 import RefundPolicy from 'navPages/RefundPolicy';
 import ReturnPolicy from 'navPages/ReturnPolicy';
 import CancellationPolicy from 'navPages/CancellationPolicy';
+const TRACKING_ID = "UA-260931205-1"; // OUR_TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
 
 function App() {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
   return (
     <>
       <Router>

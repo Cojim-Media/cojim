@@ -99,7 +99,7 @@ const Membership = () => {
             setSubmitted(false);
             Swal.fire({
                 title: 'Error!',
-                text: 'Please upload payment receipt to continue',
+                text: 'Please upload donation receipt to continue',
                 icon: 'error',
                 confirmButtonText: 'Ok'
             });
@@ -110,7 +110,7 @@ const Membership = () => {
             setSubmitted(false);
             Swal.fire({
                 title: 'Error!',
-                text: 'Please upload payment receipt to continue',
+                text: 'Please upload passport photo to continue',
                 icon: 'error',
                 confirmButtonText: 'Ok'
             });
@@ -267,14 +267,14 @@ const Membership = () => {
 
                             <ul className="list-disc list-inside mt-2 ml-2">
                                 <li className="mb-3 text-gray-500">
-                                    1. Living a life that is without sins and sinful desires.
+                                    1. Make God's Word the Foundation of your life by living a life that is without sins and sinful desires.
                                 </li>
                                 <li className="mb-3 text-gray-500">
                                     2. Loving God, Jesus Christ and the Holy Spirit above all.
                                 </li>
                                 <li className="mb-3 text-gray-500">
                                     3. Love and serve others: We believe that following Jesus means loving
-                                    and serving others, just as he did. We ask all members to strive to
+                                    and serving others, just as He did. We ask all members to strive to
                                     love their fellow human beings as themselves and to seek out opportunities
                                     to help those who are less privileged.
                                 </li>
@@ -285,13 +285,17 @@ const Membership = () => {
                                     5. Church building projects supports
                                 </li>
                                 <li className="mb-3 text-gray-500">
-                                    6. Seed Sowing
+                                    6. Seed sowing
                                 </li>
                                 <li className="mb-3 text-gray-500">
                                     7. Offerings
                                 </li>
                                 <li className="mb-3 text-gray-500">
                                     8. Thanksgiving/Maintenance fees
+                                </li>
+                                <li className="mb-3 text-gray-500">
+                                    9. Note: These freewill donations are offered to God, His children and His works.
+                                    Therefore, they are not refundable.
                                 </li>
                             </ul>
 
@@ -440,7 +444,7 @@ const Membership = () => {
                                     onClick={() => setIsMakingPayment(true)}
                                     type="button"
                                     className="flex items-center justify-between w-full px-6 py-3 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
-                                    <span>Make Payment </span>
+                                    <span>Make Donation </span>
 
                                     <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 rtl:-scale-x-100" viewBox="0 0 20 20" fill="currentColor">
                                         <path fillRule="evenodd"
@@ -458,7 +462,7 @@ const Membership = () => {
                                             rounded-md font-semibold text-xs tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none 
                                             focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150" htmlFor="receiptImage">
 
-                                            Upload proof of payment
+                                            Upload proof of donation
                                         </label>
                                         <input id="receiptImage" onChange={handleReceiptUpload} className="text-sm cursor-pointer w-36 hidden" type="file" />
 

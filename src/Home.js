@@ -92,6 +92,24 @@ const Home = () => {
           </div>
 
           <div className="mt-8 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 xl:grid-cols-3">
+          <div>
+              <div className="relative">
+                <img className="h-36 w-full rounded-lg object-cover object-center lg:h-44" src={partner_min} alt="" />
+                <div className="absolute bottom-0 flex p-3 bg-gray-900">
+                  <div className="mx-4">
+                    <a href="partnership">
+                    <h1 className="text-sm text-gray-200">Become a Partner</h1>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <hr className="my-6 w-32 text-blue-500" />
+              <p className="text-sm text-gray-400">
+                Join Our Community of Compassion: we're a family united by our love of God and our commitment to serving others.
+              </p>
+            </div>
+
             <div>
               <div className="relative">
                 <img className="h-36 w-full rounded-lg object-cover object-center lg:h-44" src={online_message} alt="" />
@@ -117,7 +135,7 @@ const Home = () => {
                 <div className="absolute bottom-0 flex p-3 bg-gray-900">
                   <div className="mx-4">
                     <a target="_blank" rel="noreferrer" href="https://logif.org">
-                      <h1 className="text-sm text-gray-200">Want to do good? Donate today</h1>
+                      <h1 className="text-sm text-gray-200">Want to do good? Visit LOGIF</h1>
                     </a>
                   </div>
                 </div>
@@ -131,24 +149,7 @@ const Home = () => {
                 future for all.
               </p>
             </div>
-
-            <div>
-              <div className="relative">
-                <img className="h-36 w-full rounded-lg object-cover object-center lg:h-44" src={partner_min} alt="" />
-                <div className="absolute bottom-0 flex p-3 bg-gray-900">
-                  <div className="mx-4">
-                    <a href="partnership">
-                    <h1 className="text-sm text-gray-200">Become a Partner</h1>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <hr className="my-6 w-32 text-blue-500" />
-              <p className="text-sm text-gray-400">
-                Join Our Community of Compassion: we're a family united by our love of God and our commitment to serving others.
-              </p>
-            </div>
+            
           </div>
         </div>
       </section>

@@ -1,15 +1,13 @@
-import './App.css';
+import React, {useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ReactGA from 'react-ga';
+import './App.css';
 import Home from './Home';
 import About from './navPages/about us/About';
-import Sermons from './navPages/sermons/Sermons';
-import Events from './navPages/events/Events';
-import Logif from './navPages/logif/Logif';
 import Media from './navPages/media/Media';
 import Give from './navPages/give/Give';
 import Local from './navPages/give/local/Local';
 import International from './navPages/give/International';
-import Gallery from './navPages/galery/Gallery';
 import ContactUs from 'navPages/ContactUs';
 import NotFound from 'navPages/NotFound';
 import Partnership from 'navPages/partnership/Partnership';
@@ -34,11 +32,21 @@ import PrayerLineFrom from 'navPages/PrayerLineFrom';
 import PrayerLineList from 'navPages/admin/PrayerLineList';
 import ShopList from 'navPages/shop/ShopList';
 import Cart from 'navPages/shop/Cart';
-import Checkout from 'navPages/shop/Checkout';
 import AddProduct from 'navPages/shop/AddProduct';
 import ListProduct from 'navPages/shop/ListProduct';
+import Sales from 'navPages/admin/Sales';
+import TermAndCondition from 'navPages/TermAndCondition';
+import RefundPolicy from 'navPages/RefundPolicy';
+import ReturnPolicy from 'navPages/ReturnPolicy';
+import CancellationPolicy from 'navPages/CancellationPolicy';
+const TRACKING_ID = "UA-260931205-1"; // OUR_TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
 
 function App() {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
   return (
     <>
       <Router>
@@ -46,14 +54,10 @@ function App() {
           <Route path="/" exact element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<ContactUs />} />
-          <Route path="/sermon" element={<Sermons />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/logif" element={<Logif />} />
           <Route path="/media" element={<Media />} />
           <Route path="/give" element={<Give />} />
           <Route path="/local" element={<Local />} />
           <Route path="/inter" element={<International />} />
-          <Route path="/gallery" element={<Gallery />} />
           <Route path="/membership" element={<Membership />} />
           <Route path="/member/login" element={<MemberLogin />} />
           <Route path="/partnership" element={<Partnership />} />
@@ -71,6 +75,7 @@ function App() {
             <Route path="prayer-line-list" element={<PrayerLineList />} />
             <Route path="add-product" element={<AddProduct />} />
             <Route path="product-list" element={<ListProduct />} />
+            <Route path="orders" element={<Sales />} />
             <Route path="profile" element={<Profile />} />
             <Route path="partner-payment-list/:partnerId" element={<PartnerPaymentList />} />
             <Route path="member-payment-list/:memberId" element={<MemberPaymentList />} />
@@ -79,7 +84,10 @@ function App() {
           </Route>
           <Route path="/shop" element={<ShopList />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/term-and-condition" element={<TermAndCondition />} />
+          <Route path="/refund-policy" element={<RefundPolicy />} />
+          <Route path="/return-policy" element={<ReturnPolicy />} />
+          <Route path="/cancellation-policy" element={<CancellationPolicy />} />
           <Route path="/verify-globalpay" element={<GlobalPayReceipt />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

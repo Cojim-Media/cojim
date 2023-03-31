@@ -43,7 +43,7 @@ const MemberMakePayment = () => {
             setSubmitted(false);
             Swal.fire({
                 title: 'Error!',
-                text: 'Please upload payment receipt to continue',
+                text: 'Please upload donation receipt to continue',
                 icon: 'error',
                 confirmButtonText: 'Ok'
             });
@@ -138,7 +138,7 @@ const MemberMakePayment = () => {
                                     htmlFor="email"
                                     className="mb-3 block text-base font-medium text-[#e6514c]"
                                 >
-                                    Save payment record below after making the payment
+                                    Save donation record below after making the donation
                                 </label>
 
                                 <div className="font-semibold">How much are you paying?</div>
@@ -154,7 +154,7 @@ const MemberMakePayment = () => {
                                                 rounded-md font-semibold text-xs tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none 
                                                 focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150" htmlFor="receiptImage">
 
-                                                Upload proof of payment
+                                                Upload proof of donation
                                             </label>
                                             <input id="receiptImage" onChange={handleReceiptUpload} className="text-sm cursor-pointer w-36 hidden" type="file" />
 

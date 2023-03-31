@@ -15,37 +15,43 @@ const NavBar = () => {
         <nav className="hidden py-2 px-4 text-gray-500 lg:block">
           <ul className="flex space-x-5">
             <li className="hover:text-gray-900">
-              <a className="font-bold" href="/#">Home</a>
+              <a className="font-bold text-sm" href="/#">Home</a>
             </li>
             <li className="hover:text-gray-900">
-              <a className="font-bold" href="/about">About</a>
+              <a className="font-bold text-sm" href="/about">About</a>
             </li>
             <li className="hover:text-gray-900">
-              <a className="font-bold" href="/contact">Contact</a>
+              <a className="font-bold text-sm" href="/contact">Contact</a>
             </li>
             <li className="hover:text-gray-900">
-              <a className="font-bold" href="/membership">Membership</a>
+              <a className="font-bold text-sm" href="/membership">Membership</a>
             </li>
             <li className="hover:text-gray-900">
-              <a className="font-bold" href="/partnership">Partnership</a>
+              <a className="font-bold text-sm" href="/partnership">Partnership</a>
             </li>
             <li className="hover:text-gray-900">
-              <a className="font-bold" href="/media">Media</a>
+              <a className="font-bold text-sm" href="/media">Media</a>
             </li>
             <li className="hover:text-gray-900">
-              <a className="font-bold" href="/give">Give</a>
+              <a className="font-bold text-sm" href="/give">Give</a>
+            </li>
+            <li className="hover:text-gray-900">
+              <a className="font-bold text-sm" href="/prayer-line-form">Prayer Line Form</a>
+            </li>
+            <li className="hover:text-gray-900">
+              <a className="font-bold text-sm" href="/shop">Shop</a>
             </li>
           </ul>
         </nav>
         <div className="hidden lg:flex justify-between">
           <a href="/member/login">
-            <button className="rounded-full bg-white text-primary border-primary border-2 px-5 py-3 m-1 font-bold text-xs hover:drop-shadow-lg">
+            <button className="rounded-full bg-white text-primary border-primary border-2 px-3 py-2 m-1 font-bold text-xs hover:drop-shadow-lg">
               Member Login
             </button>
           </a>
 
           <a href="/partner/login">
-            <button className="rounded-full bg-primary text-white px-6 py-3 m-1 font-bold text-xs hover:drop-shadow-lg">
+            <button className="rounded-full bg-primary text-white px-4 py-2 m-1 font-bold text-xs hover:drop-shadow-lg">
               Partner Login
             </button>
           </a>
@@ -76,15 +82,17 @@ const NavBar = () => {
           <a href="/partnership">Partnership</a>
           <a href="/media">Media</a>
           <a href="/give">Give</a>
+          <a href="/prayer-line-form">Prayer Line Form</a>
+          <a href="/shop">Shop</a>
           <div className="flex justify-between">
             <a href="/member/login">
-              <button className="rounded-full bg-white text-primary border-primary border-2 px-5 py-3 m-1 font-bold text-xs hover:drop-shadow-lg">
+              <button className="rounded-full bg-white text-primary border-primary border-2 px-3 py-2 m-1 font-bold text-xs hover:drop-shadow-lg">
                 Member Login
               </button>
             </a>
 
             <a href="/partner/login">
-              <button className="rounded-full bg-primary text-white px-6 py-3 m-1 font-bold text-xs hover:drop-shadow-lg">
+              <button className="rounded-full bg-primary text-white px-4 py-2 m-1 font-bold text-xs hover:drop-shadow-lg">
                 Partner Login
               </button>
             </a>

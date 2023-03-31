@@ -10,7 +10,8 @@
   gap: 80px;
   height: 100vh;
 }
-.l-left {
+
+/* .l-left {
   padding: 20px 30px 40px 20px;
   display: flex;
   flex-direction: column;
@@ -61,9 +62,9 @@
   width: 250px;
   padding: 10px;
   border-radius: 5px;
-}
+} */
 /* l-right */
-.l-right {
+/* .l-right {
   padding: 20px 30px 30px 20px;
   display: flex;
   flex-direction: column;
@@ -86,10 +87,10 @@
 .l-icon {
   padding: 20px 0px 0px 290px;
   height: 140px;
-}
+} */
 /* paystack */
 
-.paystack {
+/* .paystack {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -129,10 +130,10 @@
   padding: 5px;
   border: none;
   border-radius: 5px;
-}
+} */
 
 /* For the tablet view */
-@media screen and (max-width: 992px) {
+/* @media screen and (max-width: 992px) {
   .local-body {
     gap: 30px;
     padding: 450px 50px;
@@ -142,16 +143,18 @@
   .l-icon {
     padding: 20px 0px 0px 60px;
   }
-}
+} */
 
 /* For the mobile View */
 @media screen and (max-width: 576px) {
   .local-body {
-    padding: 820px 0px;
-    height: 100vh;
-    flex-direction: column;
+    padding: 20px 0px;
+    height: 0vh;
+    justify-content: end;
+    align-items: center;
   }
-  .l-left {
+
+  /* .l-left {
     width: 350px;
     height: inherit;
   }
@@ -163,5 +166,5 @@
   }
   .l-icon {
     padding: 20px 0px 0px 20px;
-  }
+  } */
 }

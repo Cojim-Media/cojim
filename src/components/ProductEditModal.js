@@ -118,7 +118,7 @@ const ProductEditModal = ({ toggleEditModal, itemDetails, isEditModalOpen, formI
                       onChange={handleFormInput}
                       value={formInputData.description}
                       name="description"
-                      class="w-full pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
+                      className="w-full pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
                       rows="3">
 
                     </textarea>

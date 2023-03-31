@@ -118,7 +118,6 @@ const MemberList = () => {
                                                         <span className="bg-yellow-200 text-yellow-600 py-1 px-3 rounded-full text-xs">Pending</span>
                                                     )
                                                 }
-
                                             </td>
 
                                             <td className="px-4 py-3">

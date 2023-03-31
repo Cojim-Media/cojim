@@ -49,6 +49,12 @@ const AddProduct = () => {
             return false;
         }
 
+        if (thumbnailFile === product_placeholder) {
+            setErroMsg("Please select a product thumbnail");
+            setError(true);
+            return false;
+        }
+
         setError(false);
         setSubmitted(true);
 
@@ -73,11 +79,6 @@ const AddProduct = () => {
                 setErroMsg(content.message);
                 setError(true);
             } else {
-                setFormInputData({
-                    ...formInputData,
-                    productName: '', description: '', category: '', language: '', sellingPrice: '', quantity: '',
-                    unitOfMeasurement: '', status: 'available'
-                });
                 Swal.fire({
                     title: 'Success!',
                     text: content.message,

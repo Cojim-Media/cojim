@@ -1,5 +1,5 @@
 {
-  "name": "church",
+  "name": "cojim",
   "version": "0.1.0",
   "proxy": "https://cojim-api.onrender.com",
   "private": true,

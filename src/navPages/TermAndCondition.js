@@ -6,16 +6,16 @@ const TermAndCondition = () => {
     return (
         <>
             <Navbar />
-            <div class="container mx-auto py-8 px-4">
-                <h1 class="text-2xl font-bold mb-4">Terms and Conditions</h1>
-                <p class="mb-4">
+            <div className="container mx-auto py-8 px-4">
+                <h1 className="text-2xl font-bold mb-4">Terms and Conditions</h1>
+                <p className="mb-4">
                     By accessing or using cojim.org (the "Website"),
                     you agree to be bound by the following terms and conditions of use (the "Terms").
                     Please read these Terms carefully before using the Website.
                     If you do not agree to these Terms, you should not access or use the Website.
                 </p>
-                <h2 class="text-xl font-bold mb-4">Use of the Website</h2>
-                <p class="mb-4">
+                <h2 className="text-xl font-bold mb-4">Use of the Website</h2>
+                <p className="mb-4">
                     The Website is provided for informational and educational purposes only.
                     You may use the Website only for lawful purposes and in accordance with these Terms.
                     You may not use the Website in any manner that could damage, disable, overburden,
@@ -24,8 +24,8 @@ const TermAndCondition = () => {
                     the Website for any purpose, including monitoring or copying any of the material on the Website.
                 </p>
 
-                <h2 class="text-xl font-bold mb-4">Intellectual Property Rights</h2>
-                <p class="mb-4">
+                <h2 className="text-xl font-bold mb-4">Intellectual Property Rights</h2>
+                <p className="mb-4">
                     The Website and its entire contents, features, and functionality
                     (including but not limited to all information, software, text, displays, images,
                     video, and audio, and the design, selection, and arrangement thereof),
@@ -33,8 +33,8 @@ const TermAndCondition = () => {
                     and are protected by Nigeria and international copyright, trademark, patent,
                     trade secret, and other intellectual property or proprietary rights laws.
                 </p>
-                <h2 class="text-xl font-bold mb-4">User Content</h2>
-                <p class="mb-4">
+                <h2 className="text-xl font-bold mb-4">User Content</h2>
+                <p className="mb-4">
                     The Website may include interactive features and areas that allow users to
                     submit or upload content, including but not limited to comments, photos, videos,
                     and other materials (collectively, "User Content").
@@ -45,12 +45,12 @@ const TermAndCondition = () => {
                     prepare derivative works of, display, and perform your User Content in connection with
                     the Website and COJIM's business operations.
                 </p>
-                <h2 class="text-xl font-bold mb-4">Prohibited Uses</h2>
-                <p class="mb-4">
+                <h2 className="text-xl font-bold mb-4">Prohibited Uses</h2>
+                <p className="mb-4">
                     You may use the Website only for lawful purposes and in accordance with these Terms. 
                     You agree not to use the Website:
                 </p>
-                <ul class="list-disc ml-8 mb-4">
+                <ul className="list-disc ml-8 mb-4">
                     <li>
                         In any way that violates any applicable Federal, State, Local, or International law or regulation
                     </li>
@@ -63,8 +63,8 @@ const TermAndCondition = () => {
                     </li>
                     <li>To engage in any other conduct that restricts or inhibits anyone's use or enjoyment of the Website, or which, as determined by COJIM, may harm COJIM or users of the Website or expose them to liability</li>
                 </ul>
-                <h2 class="text-xl font-bold mb-4">Disclaimer of Warranties</h2>
-                <p class="mb-4">
+                <h2 className="text-xl font-bold mb-4">Disclaimer of Warranties</h2>
+                <p className="mb-4">
                     THE WEBSITE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS,
                     WITHOUT ANY WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. COJIM DISCLAIMS ALL WARRANTIES,
                     EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY,

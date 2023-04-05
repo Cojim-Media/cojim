@@ -39,6 +39,9 @@ import TermAndCondition from 'navPages/TermAndCondition';
 import RefundPolicy from 'navPages/RefundPolicy';
 import ReturnPolicy from 'navPages/ReturnPolicy';
 import CancellationPolicy from 'navPages/CancellationPolicy';
+import Equipment from 'navPages/Equipment';
+import AdminEquipmentList from 'navPages/admin/AdminEquipmentList';
+import AddEquipment from 'navPages/admin/AddEquipment';
 const TRACKING_ID = "UA-260931205-1"; // OUR_TRACKING_ID
 ReactGA.initialize(TRACKING_ID);
 
@@ -64,6 +67,7 @@ function App() {
           <Route path="/partner/login" element={<PartnerLogin />} />
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/prayer-line-form" element={<PrayerLineFrom />} />
+          <Route path="/equipment" element={<Equipment />} />
           <Route path="dashboard/" element={<DashboardLayout />}>
             <Route index element={<Overview />} />
             <Route path="overview" element={<Overview />} />
@@ -76,6 +80,8 @@ function App() {
             <Route path="add-product" element={<AddProduct />} />
             <Route path="product-list" element={<ListProduct />} />
             <Route path="orders" element={<Sales />} />
+            <Route path="equipment" element={<AdminEquipmentList />} />
+            <Route path="add-equipment" element={<AddEquipment />} />
             <Route path="profile" element={<Profile />} />
             <Route path="partner-payment-list/:partnerId" element={<PartnerPaymentList />} />
             <Route path="member-payment-list/:memberId" element={<MemberPaymentList />} />

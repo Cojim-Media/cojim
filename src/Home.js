@@ -9,6 +9,7 @@ import cta_img from 'img/cta-img.jpg';
 import online_message from 'img/online-message.jpg';
 import donate_min from 'img/donate-min.jpg';
 import partner_min from 'img/partner-min.jpg';
+import EquipmentDonationBanner from 'components/EquipmentDonationBanner';
 
 
 const bg_images = [bg_img_2, bg_img_3, bg_img_4, bg_img_5];
@@ -27,11 +28,13 @@ const Home = () => {
   useEffect(() => {
     // start up backend server
     fetch('/api/startup');
-  },[]);
+  }, []);
 
   return (
     <>
       <Navbar />
+
+      <EquipmentDonationBanner />
 
       <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
         <div className="absolute top-0 w-full h-full bg-center bg-cover" style={{ backgroundImage: `url(${backgroundImage})` }}>
@@ -92,13 +95,13 @@ const Home = () => {
           </div>
 
           <div className="mt-8 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 xl:grid-cols-3">
-          <div>
+            <div>
               <div className="relative">
                 <img className="h-36 w-full rounded-lg object-cover object-center lg:h-44" src={partner_min} alt="" />
                 <div className="absolute bottom-0 flex p-3 bg-gray-900">
                   <div className="mx-4">
                     <a href="partnership">
-                    <h1 className="text-sm text-gray-200">Become a Partner</h1>
+                      <h1 className="text-sm text-gray-200">Become a Partner</h1>
                     </a>
                   </div>
                 </div>
@@ -149,7 +152,7 @@ const Home = () => {
                 future for all.
               </p>
             </div>
-            
+
           </div>
         </div>
       </section>

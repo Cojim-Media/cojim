@@ -43,7 +43,7 @@ const Equipment = () => {
             <Navbar />
             <div className="container mx-auto px-6 py-6">
                 <h1 className="text-center text-2xl font-semibold capitalize text-gray-800 lg:text-3xl">
-                    Help us acquire the equipment we need to grow our church community
+                    Kindly Donate These Equipments Freely From Your Heart
                 </h1>
 
                 <div className="mx-auto mt-6 flex justify-center">
@@ -103,7 +103,7 @@ const Equipment = () => {
                                                         Quantity: <b> {item.quantity}</b>
                                                     </div>
 
-                                                    <p className="mb-4 pb-2">
+                                                    <p className="mb-4 pb-2 overflow-y-auto h-40">
                                                         {item.description}
                                                     </p>
                                                 </div>

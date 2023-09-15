@@ -9,8 +9,8 @@ const Cart = () => {
     // for monitoring when a http request is sent
     const [submitted, setSubmitted] = useState(false);
     // const globayPayMerchantid = {
-    //     'NGN': "22979",
-    //     'USD': "22980"
+    //     'NGN': "3366",
+    //     'USD': "3366"
     // };
     // const [globalpayCurrency, setGlobalpayCurrency] = useState('USD');
 
@@ -345,7 +345,7 @@ const Cart = () => {
                                 <form
                                     target="_blank"
                                     className="px-9"
-                                    action="https://demo.globalpay.com.ng/globalpay_demo/Paymentgatewaycapture.aspx"
+                                    action="https://www.globalpay.com.ng/GlobalPayAPI/Paymentgatewaycapture.aspx"
                                     method="POST"
                                 >
                                     <div className="mb-5">

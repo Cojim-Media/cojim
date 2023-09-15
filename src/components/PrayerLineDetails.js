@@ -50,6 +50,48 @@ const PrayerLineDetails = ({ toggleEditModal, itemDetails, isEditModalOpen }) =>
             }
         })();
     }
+
+    const handleDeleteItem = (_id) => {
+        // make user confirm delete before proceeding
+        if (!window.confirm('Are you sure you want to delete this prayer request?')) {
+            // exit function if false
+            return false;
+        }
+
+        // delete memeber from server
+        // send a delete request to the server to delete memeber
+        (async () => {
+            const rawResponse = await fetch('/api/prayer-line/delete-prayerline-request', {
+                method: 'DELETE',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ prayerRequestId: itemDetails._id, })
+            });
+            const content = await rawResponse.json();
+            const status = rawResponse.status;
+            // Redirect the user to login page if status == 401
+            if (status === 401) {
+                // redirect to login page
+                navigate("/");
+                return false;
+            }
+            // check if there is an error in the response
+            if (content.error) {
+                alert(content.message);
+            } else {
+                Swal.fire({
+                    title: 'Info!',
+                    text: content.message,
+                    icon: 'info',
+                    confirmButtonText: 'Ok'
+                });
+                refreshPage();
+            }
+        })();
+    }
+
     return (
         <>
             <div data-modal-show="true" aria-hidden="true" className={`${isEditModalOpen ? 'flex' : 'hidden'} modal bg-overlay flex flex-col justify-start items-center fixed z-50 h-full w-full inset-0 visible opacity-100 transition-all-300 overflow-auto`}>
@@ -190,7 +232,9 @@ const PrayerLineDetails = ({ toggleEditModal, itemDetails, isEditModalOpen }) =>
                                             <button onClick={handleApprove} disabled={itemDetails.reviewed} className={`w-max ${itemDetails.reviewed ? 'bg-green-200' : 'bg-green-900'} text-white uppercase font-bold rounded-lg p-2 px-3 m-2`} href="/#">
                                                 <span className="text-center">Mark as Reviewed</span>
                                             </button>
-
+                                            <button onClick={handleDeleteItem} className="w-max bg-red-900 text-white uppercase font-bold rounded-lg p-2 px-3 m-2" href="/#">
+                                                <span className="text-center">Delete</span>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>

@@ -316,7 +316,7 @@ const PartnershipPaymentModalContent = () => {
                   <form
                     target="_blank"
                     className="py-6 px-9"
-                    action="https://demo.globalpay.com.ng/globalpay_demo/Paymentgatewaycapture.aspx"
+                    action="https://www.globalpay.com.ng/GlobalPayAPI/Paymentgatewaycapture.aspx"
                     method="POST"
                   >
                     <div className="mb-5">
@@ -363,7 +363,7 @@ const PartnershipPaymentModalContent = () => {
                       </div>
 
                       <input type="hidden" id="merch_txnref" name="merch_txnref" value={makeid(50)}></input>
-                      <input type="hidden" id="merchantid" name="merchantid" value="22980" />
+                      <input type="hidden" id="merchantid" name="merchantid" value="3366" />
                     </div>
 
 

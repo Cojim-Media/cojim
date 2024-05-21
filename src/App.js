@@ -5,6 +5,7 @@ import './App.css';
 import Home from './Home';
 import About from './navPages/about us/About';
 import Media from './navPages/media/Media';
+import Media20 from './navPages/media/Media20';
 import Give from './navPages/give/Give';
 import Local from './navPages/give/local/Local';
 import International from './navPages/give/International';
@@ -42,6 +43,7 @@ import CancellationPolicy from 'navPages/CancellationPolicy';
 import Equipment from 'navPages/Equipment';
 import AdminEquipmentList from 'navPages/admin/AdminEquipmentList';
 import AddEquipment from 'navPages/admin/AddEquipment';
+import LiveStreamPlayer from 'navPages/media/LiveStreamPlayer';
 const TRACKING_ID = "UA-260931205-1"; // OUR_TRACKING_ID
 ReactGA.initialize(TRACKING_ID);
 
@@ -58,6 +60,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/media" element={<Media />} />
+          <Route path="/media20" element={<Media20 />} />
+          <Route path="/media/:mediaId" element={<LiveStreamPlayer />} />
           <Route path="/give" element={<Give />} />
           <Route path="/local" element={<Local />} />
           <Route path="/inter" element={<International />} />

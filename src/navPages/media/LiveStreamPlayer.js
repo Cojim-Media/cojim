@@ -12,9 +12,13 @@ const LiveChat = () => {
 
     ]);
     const [message, setMessage] = useState("");
-    // setChatData([
-        
-    // ])
+    useEffect(() => {
+        // Fetch stream data from your API
+        setChatData([
+
+        ])
+    },[]);
+
     return (
         <div className="bg-slate-200 p-5 mb-2  rounded pr-4 w-[97%]   h-[550px] ">
             <h3 className="font-bold text2lx">Chat</h3>

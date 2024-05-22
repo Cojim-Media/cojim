@@ -107,7 +107,7 @@ const LiveStreamPlayer = () => {
         } else {
             return (
                 <ReactPlayer
-                    url={`http://54.236.214.61:8081/hls/${currentStreamData.streamingKey}.m3u8`}
+                    url={`https://54.236.214.61:8081/hls/${currentStreamData.streamingKey}.m3u8`}
                     controls
                     width="100%"
                     height="auto"

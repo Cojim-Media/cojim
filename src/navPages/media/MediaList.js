@@ -16,7 +16,6 @@ const MediaList = () => {
     const fetchCurrentStreamData = async () => {
         try {
             const response = await axios.get(`/api/live-stream/live-stream-events`);
-            console.log(response.data.data)
             setStreamData({ ...response.data.data });
             setIsDataReady(true);
         } catch (error) {

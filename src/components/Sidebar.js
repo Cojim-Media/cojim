@@ -21,22 +21,22 @@ const Sidebar = ({ isSidebarOpen }) => {
             const content = await rawResponse.json();
             const status = rawResponse.status;
             // Redirect the user to login page if status == 401
-            // if (status === 401) {
-            //     // redirect to login page
-            //     navigate("/partnership");
-            //     return false;
-            // }
+            if (status === 401) {
+                // redirect to login page
+                navigate("/partnership");
+                return false;
+            }
             // check if there is an error in the response
-            // if (content.error) {
-            //     alert(content.message);
-            // } else {
-            //     setIsAdmin(content.isAdmin);
-            //     setIsPartner(content.isPartner);
-            //     setUserData({
-            //         ...userData,
-            //         ...content.data
-            //     });
-            // }
+            if (content.error) {
+                alert(content.message);
+            } else {
+                setIsAdmin(content.isAdmin);
+                setIsPartner(content.isPartner);
+                setUserData({
+                    ...userData,
+                    ...content.data
+                });
+            }
         })();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Swal from "sweetalert2";
-import * as FaIcons from "react-icons/fa";
+import Swal from "sweetalert2"; 
 import "../newcss/style.css";
 import ReactPlayer from "react-player";
 

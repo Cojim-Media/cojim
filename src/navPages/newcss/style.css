@@ -1,0 +1,187 @@
+*{
+                    transition: 0.3s;
+}
+
+.bodyofLivestream{
+                    background-color: #fff;
+                    margin: 18px;
+                    padding: 20px;
+                    border-radius: 8px;
+}
+
+
+
+.videoItemsContainers{
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding-top: 50px; 
+                    max-width: 1400px;
+                    justify-content: center; 
+                    margin: auto;
+                    gap: 6px;
+}
+
+
+.containerInner{
+                    width: 380px;
+                    position: relative;
+
+}
+
+.containerInner h3{ 
+                    padding: 4px;
+                    padding-bottom: 7px;
+}
+
+.videoItems{
+                    height: 300px;
+                    width: 380px;
+                    background-position: center;
+                    justify-content: center;
+                    padding: 14px;
+                    background-color:  rgb(232, 232, 232);
+                    text-align: center;
+                    border-radius: 10px;
+                    overflow:  hidden;
+                    position: inherit;
+                    background-size: cover;
+}
+
+.floatingPlay{
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                   
+                    padding: 10px;
+                    width: 100%;
+                    padding-top: 39px;
+                     display: flex;
+                     justify-content: space-between;
+                    background: linear-gradient(to bottom,  #0084b000, #0b1220); /* You can adjust the colors and angle */
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat; 
+
+}
+
+.videoOff{
+                    position: fixed;
+                    height:  100%;
+                    width: 100%;
+                    background-color: rgba(233, 233, 233, 0.348);
+                    backdrop-filter: blur(10px);
+                       top: 0;
+                    left: 0;
+                    right: 0;
+                    transform: translate(100%);
+                    z-index: 99999;
+}
+
+.videoon{
+                    transform: translate(0);
+                   
+                 
+}
+
+
+.formofff{
+                    position: fixed;
+                    height:  100%;
+                    width: 100%;
+                    background-color: rgba(233, 233, 233, 0.196);
+                    backdrop-filter: blur(3px);
+                       top: 0;
+                    left: 0;
+                    right: 0;
+                    transform: translate(100%);
+                    z-index: 99999;
+}
+
+
+.formofff form{
+                    background-color:  lightgrey;
+                    height: 200px;
+                    width:  400px;
+                    position: absolute;
+                    top: 0 ;
+                    padding: 10px;
+                    bottom: 0;
+                    left: 0;
+                    right:  0;
+                    margin: auto;
+                    border-radius: 8px;
+}
+
+.formonn{
+                    transform: translate(0);
+                    transition: 0.1s;
+                   
+                 
+}
+
+.videoItself video{
+                    z-index: 99999999999;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                     
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    width: 80%;
+                    min-width:  400px;
+}
+
+.addEventS{
+                    padding: 13px;
+}
+
+.addEventS svg{
+                    padding: 10px;
+
+                    background-color: lightgray;
+                    border-radius: 8px;
+                    height: 40px;
+                    width: 40px;
+
+}
+
+.footNotch{
+                    position: absolute;
+                    bottom: 10px;
+                    left: 0;
+                    right: 0;
+                    display: flex;
+                    justify-content: space-between;
+                    margin: auto;
+                    width: 80%; 
+}
+
+.footNotch .cancBtn{
+                    padding: 8px 20px;
+                    border-radius: 8px;
+                    background-color: rgb(234, 234, 234);
+}
+
+.footNotch .actBtn{
+                    background-color: #2563eb;
+                    padding: 8px 20px;
+                    border-radius: 8px;
+                    color: #fff;
+}
+
+.closeIcon{
+                    position: absolute;
+                    right: 20px;
+                    top: 20px;
+}
+
+.eventName{
+                    display: block;
+                    width: 80%;
+                    margin: auto;
+                    background-color: transparent;
+                    border-bottom: #0b1220 1px solid;
+                    outline: none;
+                    padding: 5px 9px;
+}

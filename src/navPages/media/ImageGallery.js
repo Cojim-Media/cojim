@@ -3,6 +3,7 @@ import './media.css'; // Import your CSS file
 
 const ImageGallery = () => {
   const [images, setImages] = useState([]);
+  const [selectedImage, setSelectedImage] = useState(null); // State for selected image
 
   useEffect(() => {
     // Fetch the images from your API endpoint
@@ -14,8 +15,12 @@ const ImageGallery = () => {
       .catch((error) => console.error("Error fetching images:", error));
   }, []);
 
-  const handleClick = (url) => {
-    window.open(url, "_blank");
+  const openImageModal = (image) => {
+    setSelectedImage(image); // Set the clicked image as the selected one
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null); // Close the modal by setting selected image to null
   };
 
   return (
@@ -38,7 +43,7 @@ const ImageGallery = () => {
               <div
                 key={image._id}
                 className="gallery-item"
-                onClick={() => handleClick(image.link)}
+                onClick={() => openImageModal(image)}
               >
                 <img src={image.link} alt={`Image ${image._id}`} />
               </div>
@@ -46,6 +51,14 @@ const ImageGallery = () => {
           </div>
         </div>
       </section>
+
+      {/* Modal Section */}
+      {selectedImage && (
+        <div className="modal" onClick={closeModal}>
+          <span className="close" onClick={closeModal}>&times;</span>
+          <img className="modal-content" src={selectedImage.link} alt="Selected" />
+        </div>
+      )}
     </div>
   );
 };

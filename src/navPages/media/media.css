@@ -38,3 +38,31 @@
     height: 200px;
   }
 }
+/* ImageGallery.css */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Controls the number of columns */
+  gap: 10px; /* No space between images */
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover; /* Ensures images maintain aspect ratio */
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}

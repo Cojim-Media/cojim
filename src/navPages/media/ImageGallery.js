@@ -45,7 +45,7 @@ const ImageGallery = () => {
                 className="gallery-item"
                 onClick={() => openImageModal(image)}
               >
-                <img src={image.link} alt={`Image ${image._id}`} />
+                <img src={image.link} alt={` ${image._id}`} />
               </div>
             ))}
           </div>
@@ -63,4 +63,4 @@ const ImageGallery = () => {
   );
 };
 
-export default ImageGallery;
+export default ImageGallery;  

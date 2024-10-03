@@ -3,12 +3,15 @@ import axios from "axios";
 import Swal from "sweetalert2"; 
 import "../newcss/style.css";
 import ReactPlayer from "react-player";
+import { MdOutlineContentCopy } from "react-icons/md";
+import { AiOutlineCheck } from "react-icons/ai";
+import { BiTrash } from "react-icons/bi";
 
 const LiveStream = () => {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [expandedEvent, setExpandedEvent] = useState(null);
+  // const [expandedEvent, setExpandedEvent] = useState(null);
   const [showVideo, setShowVideo] = useState(null);
   const [videoOn, setVideoOn] = useState(false);
   const [editMode, setEditMode] = useState(false);
@@ -26,6 +29,50 @@ const LiveStream = () => {
   useEffect(() => {
     fetchEvents();
   }, []);
+
+  const [copiedEventId, setCopiedEventId] = useState(null); // Track which event has been copied
+
+  const handleCopy = (streamingKey, eventId) => {
+    navigator.clipboard.writeText(streamingKey); // Copy to clipboard
+    setCopiedEventId(eventId); // Set the copied event id
+
+    // Remove the 'coppiedAlert' class after 3 seconds
+    setTimeout(() => {
+      setCopiedEventId(null);
+    }, 3000);
+  };
+
+
+  const handleDeleteEvent = (eventId) => {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // Call the API to delete the event
+        axios
+          .delete(`/api/live-stream/live-stream-events/${eventId}`)
+          .then((response) => {
+            if (response.data.success) {
+              // Show success message
+              Swal.fire('Deleted!', 'Live stream event deleted successfully.', 'success');
+
+              // Update the events list in the UI by removing the deleted event
+              setEvents((prevEvents) => prevEvents.filter((event) => event._id !== eventId));
+            }
+          })
+          .catch((error) => {
+            // Show error message in case of failure
+            Swal.fire('Error!', 'An error occurred while deleting the event.', 'error');
+          });
+      }
+    });
+  };
 
   const fetchEvents = () => {
     setLoading(true);
@@ -47,9 +94,7 @@ const LiveStream = () => {
       });
   };
 
-  const toggleMoreInfo = (eventId) => {
-    setExpandedEvent(expandedEvent === eventId ? null : eventId);
-  };
+ 
 
   const toggleVideo = (eventId) => {
     setShowVideo(showVideo === eventId ? null : eventId);
@@ -167,6 +212,7 @@ const LiveStream = () => {
     }
   };
 
+
   return (
     <>
       <div className={`formofff ${formOn ? "formonn" : ""}`}>
@@ -274,23 +320,30 @@ const LiveStream = () => {
             <div
               className="videoItems"
               style={{
-                backgroundImage: `url(${event.thumbnailUrl})`,
+                backgroundImage: `url(${event.thumbnailUrl || 'https://res.cloudinary.com/sharefood/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1716128978/Designer_f5nuz9.png'})`,
                 marginBottom: "20px",
+                backgroundSize: 'cover',
                 color: "#fff",
               }}
             >
            
 
-              <button onClick={() => toggleMoreInfo(event._id)}>
-                {expandedEvent === event._id ? "Show Less" : "Show More"}
-              </button>
+           <button onClick={() => handleDeleteEvent(event._id)} className="deleteButton">
+             
+           <BiTrash />
 
-              {expandedEvent === event._id && (
+           </button>
+
+              {/* <button onClick={() => toggleMoreInfo(event._id)}>
+                {expandedEvent === event._id ? "Show Less" : "Show More"}
+              </button> */}
+
+              {/* {expandedEvent === event._id && (
                 <div style={{ marginTop: "10px" }}>
                   <p>Streaming Key: {event.streamingKey}</p>
                 
                 </div>
-              )}
+              )} */}
 
               <div className="floatingPlay">
                 <div onClick={() => toggleVideo(event._id)}>
@@ -327,7 +380,19 @@ const LiveStream = () => {
                 </div>
               </div>
             </div>
+            <p className="streaminKeys">
+            <span className="streamText">{event.streamingKey}</span>
+            <span className="copyIcon" onClick={() => handleCopy(event.streamingKey, event._id)}>
+             
+              {copiedEventId === event._id ? <AiOutlineCheck /> :  <MdOutlineContentCopy />}
+            </span>
+          </p>
+
+          {/* Display 'Copied' message and add 'coppiedAlert' class when the event has been copied */}
+    
             <h3>{event.eventName}</h3>
+
+
           </div>
         ))}
 

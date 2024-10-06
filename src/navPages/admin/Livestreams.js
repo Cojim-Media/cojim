@@ -348,7 +348,7 @@ const LiveStream = () => {
               <div className="floatingPlay">
                 <div onClick={() => toggleVideo(event._id)}>
                   <svg
-                    className="svg-icon"
+                    className="svg-icon "
                     style={{
                       width: "1em",
                       height: "1em",
@@ -397,17 +397,7 @@ const LiveStream = () => {
         ))}
 
         <div className={`videoOff ${videoOn ? "videoon" : ""}`}>
-          <div className="closeIcon" onClick={hideVideos}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1.6em"
-              height="1.6em"
-              viewBox="0 0 16 16"
-              fill="currentColor"
-            >
-              <path d="M11.5 4a.5.5 0 0 0 .5.5h1.75a.75.75 0 0 1 0 1.5H12a2 2 0 0 1-2-2V2.25a.75.75 0 0 1 1.5 0zm0 8a.5.5 0 0 1 .5-.5h1.75a.75.75 0 0 0 0-1.5H12a2 2 0 0 0-2 2v1.75a.75.75 0 0 0 1.5 0zM4 11.5a.5.5 0 0 1 .5.5v1.75a.75.75 0 0 0 1.5 0V12a2 2 0 0 0-2-2H2.25a.75.75 0 0 0 0 1.5zM4.5 4a.5.5 0 0 1-.5.5H2.25a.75.75 0 0 0 0 1.5H4a2 2 0 0 0 2-2V2.25a.75.75 0 0 0-1.5 0z" />
-            </svg>
-          </div>
+
 
           {showVideo &&
             events
@@ -418,6 +408,18 @@ const LiveStream = () => {
                   className="videoItself"
                   style={{ marginTop: "10px" }}
                 >
+
+<div className="closeIcon closeVideoSvg" onClick={hideVideos}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1.6em"
+              height="1.6em"
+              viewBox="0 0 16 16"
+              fill="#fff"
+            >
+              <path d="M11.5 4a.5.5 0 0 0 .5.5h1.75a.75.75 0 0 1 0 1.5H12a2 2 0 0 1-2-2V2.25a.75.75 0 0 1 1.5 0zm0 8a.5.5 0 0 1 .5-.5h1.75a.75.75 0 0 0 0-1.5H12a2 2 0 0 0-2 2v1.75a.75.75 0 0 0 1.5 0zM4 11.5a.5.5 0 0 1 .5.5v1.75a.75.75 0 0 0 1.5 0V12a2 2 0 0 0-2-2H2.25a.75.75 0 0 0 0 1.5zM4.5 4a.5.5 0 0 1-.5.5H2.25a.75.75 0 0 0 0 1.5H4a2 2 0 0 0 2-2V2.25a.75.75 0 0 0-1.5 0z" />
+            </svg>
+          </div>
                   {renderPlayer(event)}
                 </div>
               ))}

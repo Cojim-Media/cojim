@@ -119,18 +119,6 @@
                  
 }
 
-.videoItself video{
-                    z-index: 99999999999;
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                     
-                    left: 0;
-                    right: 0;
-                    margin: auto;
-                    width: 80%;
-                    min-width:  400px;
-}
 
 .addEventS{
                     padding: 13px;
@@ -170,11 +158,7 @@
                     color: #fff;
 }
 
-.closeIcon{
-                    position: absolute;
-                    right: 20px;
-                    top: 20px;
-}
+
 
 .eventName{
                     display: block;
@@ -210,3 +194,32 @@
    background-color: #7a7a7a;
    color: #fff;
 }
+
+.videoItself video{
+   z-index: 999;
+   position: absolute;
+   top: 0;
+   bottom: 0;
+    
+   left: 0;
+   right: 0;
+   margin: auto;
+   width: 80%;
+   min-width:  400px;
+}
+
+
+.closeVideoSvg{
+   position: absolute !important;
+   background-color: rgba(54, 38, 38, 0.336); 
+   padding: 9px;
+   backdrop-filter: blur(40px);
+   border-radius: 10px;
+   overflow: hidden;
+   top: 20px;
+   right: 0;
+   fill: #fff;
+   z-index: 99999999999999999999999999999999999999;
+}
+
+ 

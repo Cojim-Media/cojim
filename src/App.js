@@ -44,6 +44,7 @@ import Equipment from 'navPages/Equipment';
 import AdminEquipmentList from 'navPages/admin/AdminEquipmentList';
 import AddEquipment from 'navPages/admin/AddEquipment';
 import LiveStreamPlayer from 'navPages/media/LiveStreamPlayer';
+import LiveStream from 'navPages/admin/Livestreams';
 const TRACKING_ID = "UA-260931205-1"; // OUR_TRACKING_ID
 ReactGA.initialize(TRACKING_ID);
 
@@ -77,6 +78,7 @@ function App() {
             <Route path="overview" element={<Overview />} />
             <Route path="settings" element={<AdminSettings />} />
             <Route path="partners-list" element={<PartnersList />} />
+            <Route path="livestreams" element={<LiveStream />} />
             <Route path="members-list" element={<MemberList />} />
             <Route path="unconfirmed-payments" element={<UnconfirmedPayments />} />
             <Route path="media-upload" element={<MediaUpload />} />

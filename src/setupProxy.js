@@ -11,7 +11,7 @@ module.exports = function(app) {
   app.use(
     '/hls',
     legacyCreateProxyMiddleware({
-      target: 'https://petec0x0.me',
+      target: 'https://cojim.ng',
       changeOrigin: true,
     })
   );

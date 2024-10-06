@@ -57,6 +57,8 @@ const MemberLogin = () => {
           setErroMsg(content.message);
           setError(true);
         } else {
+          // Store some user data in localStorage
+          localStorage.setItem("user", JSON.stringify(content.user));
           // redirect to login page
           navigate("/dashboard/profile");
         }

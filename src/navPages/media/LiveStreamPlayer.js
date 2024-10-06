@@ -70,8 +70,9 @@ const LiveChat = ({ roomId }) => {
                             }} src={message.userId.passportPhoto.url}   >
 
                             </div>
-                            <div className='message_Title'><b>{message.userId.firstname + " " + message.userId.lastname}</b></div>
-                            <div className='message_Title'>{message.message}</div>
+                            <div className='message_Title'>
+                                <b>{message.userId.firstname + " " + message.userId.lastname}</b> {message.message}
+                            </div>
                         </div>
                     ))}
                 </div>

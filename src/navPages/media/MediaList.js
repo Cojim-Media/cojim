@@ -51,10 +51,10 @@ const MediaList = () => {
                                             <div className="relative">
                                                 {/* <!-- Image Video --> */}
                                                 <a href={`/media/${item._id}`}>
-                                                    <img 
-                                                        alt={item.eventName} 
-                                                        src={item.thumbnailUrl || 'https://res.cloudinary.com/sharefood/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1716128978/Designer_f5nuz9.png'} 
-                                                        className="w-96 h-auto" 
+                                                    <img
+                                                        alt={item.eventName}
+                                                        src={item.thumbnailUrl || 'https://res.cloudinary.com/sharefood/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1716128978/Designer_f5nuz9.png'}
+                                                        className="w-96 h-auto"
                                                     />
                                                 </a>
                                                 <p className="absolute right-2 bottom-2 bg-gray-900 text-gray-100 text-xs px-1 py">
@@ -74,15 +74,15 @@ const MediaList = () => {
                                         </span>
                                     </div>
                                 ))}
-                                
+
                                 {/* Show Load More button if there are more items to load */}
                                 {itemsToShow < streamData.length && (
                                     <div className="col-span-12 text-center mt-4">
                                         {loadingMore ? (
                                             <ProgressBar /> // Show a spinner when loading more data
                                         ) : (
-                                            <button 
-                                                onClick={loadMoreItems} 
+                                            <button
+                                                onClick={loadMoreItems}
                                                 className="bg-gray-700 text-white px-4 py-2 rounded-md"
                                             >
                                                 Load More

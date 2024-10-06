@@ -7,7 +7,7 @@ import './media.css';
 
 
 const Media20 = () => {
- 
+
     return (
         <>
             <Navbar />
@@ -82,7 +82,7 @@ const Media20 = () => {
             </div>
 
             <MediaList />
-            <ImageGallery  />
+            <ImageGallery />
 
             <section className="mx-6 my-14 md:mx-24">
                 <h1 className="text-center text-2xl font-semibold capitalize text-gray-800 lg:text-3xl">

@@ -9,34 +9,44 @@ import MediaList from './MediaList';
 import './media.css'
 import { FaRegPaperPlane } from "react-icons/fa6";
 
-const LiveChat = () => {
+const LiveChat = ({ roomId }) => {
     const [messages, setMessages] = useState([]); // Store chat messages
     const [inputMessage, setInputMessage] = useState(''); // Store user input
-  
+
     // Fetch dummy data including photos when the component loads
     useEffect(() => {
-      axios.get('https://jsonplaceholder.typicode.com/photos')
-        .then(response => {
-          const chats = response.data.slice(0, 5); // Get only a few dummy messages with photos
-          setMessages(chats);
-        })
-        .catch(error => console.error('Error fetching messages:', error));
-    }, []);
-  
+        axios.get(`/api/live-chat/history/${roomId}`)
+            .then(response => {
+                const chats = response.data; // Get only a few dummy messages with photos
+                console.log(chats)
+                setMessages(chats);
+            })
+            .catch(error => console.error('Error fetching messages:', error));
+    }, [roomId]);
+
     // Function to handle sending a new message
-    const sendMessage = () => {
-      if (inputMessage.trim() !== '') {
-        const newMessage = {
-          albumId: 100, // Example album ID for the new message
-          id: messages.length + 1,
-          title: inputMessage,
-          url: 'https://via.placeholder.com/600/92c952', // Dummy photo for new message
-          thumbnailUrl: 'https://via.placeholder.com/150/92c952', // Thumbnail photo
-        };
-  
-        setMessages([...messages, newMessage]); // Add new message to state
-        setInputMessage(''); // Clear input field
-      }
+    const sendMessage = async () => {
+        if (inputMessage.trim() !== '') {
+            const user = localStorage.getItem('user');
+            if (user !== null) {
+                setMessages([...messages, { message: inputMessage, userId: JSON.parse(user) }]); // Add new message to state
+                setInputMessage(''); // Clear input field
+            } else {
+                alert("Signin to Chat");
+            }
+
+            await fetch('/api/live-chat/send', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    roomId,
+                    message: inputMessage,
+                })
+            });
+        }
     };
 
     return (
@@ -44,36 +54,36 @@ const LiveChat = () => {
             <h3 className="font-bold text2lx">Chat</h3>
             <div className="rounded mt-2 bg-slate-100 h-96  pr-4 overflow-y-scroll flex flex-col-reverse mb-2">
                 <div className="chat-Container">
-                {messages.map((message) => (
-          <div  key={message.id} className="chat-message">
-          
-           
-            <div style={{
-            backgroundImage: `url(${message.thumbnailUrl})`,
-            backgroundSize: 'cover', // Ensures the image covers the entire div
-            backgroundPosition: 'center', // Centers the image within the div  
-            color: 'white', // Ensure text color contrasts with the background
-            borderRadius: '10px', // Optional: Rounded corners for the message
-            marginBottom: '10px', // Spacing between messages
-            width: '20px',
-            height: '20px'
-          }} src={message.thumbnailUrl}   >
-            
-                 </div>
-                 
-                      <div className='message_Title'>{message.title}</div> 
-          </div>
-        ))}
+                    {messages.map((message, index) => (
+                        <div key={index} className="chat-message">
+
+
+                            <div style={{
+                                backgroundImage: `url(${message.userId.passportPhoto.url})`,
+                                backgroundSize: 'cover', // Ensures the image covers the entire div
+                                backgroundPosition: 'center', // Centers the image within the div  
+                                color: 'white', // Ensure text color contrasts with the background
+                                borderRadius: '10px', // Optional: Rounded corners for the message
+                                marginBottom: '10px', // Spacing between messages
+                                width: '20px',
+                                height: '20px'
+                            }} src={message.userId.passportPhoto.url}   >
+
+                            </div>
+                            <div className='message_Title'><b>{message.userId.firstname + " " + message.userId.lastname}</b></div>
+                            <div className='message_Title'>{message.message}</div>
+                        </div>
+                    ))}
                 </div>
             </div>
             <div className='inputchatT'>
-            <input 
-          type="text" 
-          value={inputMessage} 
-          onChange={(e) => setInputMessage(e.target.value)} 
-          placeholder="Type a message..."
-        />
-              <button onClick={sendMessage}><FaRegPaperPlane /></button>
+                <input
+                    type="text"
+                    value={inputMessage}
+                    onChange={(e) => setInputMessage(e.target.value)}
+                    placeholder="Type a message..."
+                />
+                <button onClick={sendMessage}><FaRegPaperPlane /></button>
             </div>
         </div>
     );
@@ -90,7 +100,8 @@ const LiveStreamPlayer = () => {
     useEffect(() => {
         // Fetch stream data from your API
         fetchCurrentStreamData();
-    },);
+        // eslint-disable-next-line
+    }, []);
 
     const fetchCurrentStreamData = async () => {
         try {
@@ -155,18 +166,18 @@ const LiveStreamPlayer = () => {
                                 <div className="flex text-white items-center justify-center h-8 px-6 rounded-3xl bg-white/[0.15] ml-4">
                                     {`3 Views`}
                                 </div>
-                             
+
                                 <div className="flex flex-col ml-3">
-                     
+
                                 </div>
                             </div>
                             <div className="flex text-white mt-4 md:mt-0">
-                
+
                             </div>
                         </div>
                     </div>
                     <div className="flex flex-col py-6 px-4 overflow-y-auto lg:w-[350px] xl:w-[400px]">
-                        <LiveChat />
+                        <LiveChat roomId={currentStreamData._id} />
                     </div>
                 </div>
             </div>

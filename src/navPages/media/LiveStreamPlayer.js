@@ -164,9 +164,9 @@ const LiveStreamPlayer = () => {
                                 <div className="text-white/[0.7]">
                                     {getTimeAgo(new Date(currentStreamData.createdAt))}
                                 </div>
-                                <div className="flex text-white items-center justify-center h-8 px-6 rounded-3xl bg-white/[0.15] ml-4">
+                                {/* <div className="flex text-white items-center justify-center h-8 px-6 rounded-3xl bg-white/[0.15] ml-4">
                                     {`3 Views`}
-                                </div>
+                                </div> */}
 
                                 <div className="flex flex-col ml-3">
 

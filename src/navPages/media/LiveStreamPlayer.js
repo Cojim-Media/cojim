@@ -136,7 +136,7 @@ const LiveStreamPlayer = () => {
         } else {
             return (
                 <ReactPlayer
-                    url={`https://cojim.ng/hls/${currentStreamData.streamingKey}.m3u8`}
+                    url={`/hls/${currentStreamData.streamingKey}.m3u8`}
                     controls
                     width="100%"
                     height="auto"

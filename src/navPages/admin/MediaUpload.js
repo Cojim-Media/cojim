@@ -8,7 +8,6 @@ const MediaUpload = () => {
     const [gallerySermons, setGallerySermons] = useState([0, 0, 0, 0]);
 
     const handleSermonLinkChange = index => e => {
-        console.log(index, e.target.value);
         let newArr = [...gallerySermons];
         newArr[index] = {
             ...newArr[index],

@@ -4,8 +4,8 @@ import ReactGA from 'react-ga';
 import './App.css';
 import Home from './Home';
 import About from './navPages/about us/About';
-import Media from './navPages/media/Media';
-import Media20 from './navPages/media/Media20';
+import Media from './navPages/media/Media20';
+import Media20 from './navPages/media/Media';
 import Give from './navPages/give/Give';
 import Local from './navPages/give/local/Local';
 import International from './navPages/give/International';
@@ -45,6 +45,7 @@ import AdminEquipmentList from 'navPages/admin/AdminEquipmentList';
 import AddEquipment from 'navPages/admin/AddEquipment';
 import LiveStreamPlayer from 'navPages/media/LiveStreamPlayer';
 import LiveStream from 'navPages/admin/Livestreams';
+import UploadVideoPage from 'navPages/admin/UploadVideoPage';
 const TRACKING_ID = "UA-260931205-1"; // OUR_TRACKING_ID
 ReactGA.initialize(TRACKING_ID);
 
@@ -79,6 +80,7 @@ function App() {
             <Route path="settings" element={<AdminSettings />} />
             <Route path="partners-list" element={<PartnersList />} />
             <Route path="livestreams" element={<LiveStream />} />
+            <Route path="video-uploads" element={<UploadVideoPage />} />
             <Route path="members-list" element={<MemberList />} />
             <Route path="unconfirmed-payments" element={<UnconfirmedPayments />} />
             <Route path="media-upload" element={<MediaUpload />} />

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import io from 'socket.io-client';
 import axios from 'axios';
 import { FaRegPaperPlane } from "react-icons/fa6";
-import './media.css'
+// import './media.css'
 
 const LiveChat = ({ roomId }) => {
     const [messages, setMessages] = useState([]);
@@ -57,7 +57,7 @@ const LiveChat = ({ roomId }) => {
 
     return (
         <div className="bg-slate-200 p-5 mb-2 rounded pr-4 w-[97%] h-[550px]">
-            <h3 className="font-bold text2lx">Chat</h3>
+            <h3 className="font-bold text2lx">Comments</h3>
             <div className="rounded mt-2 bg-slate-100 h-96 pr-4 overflow-y-scroll flex flex-col-reverse mb-2">
                 <div className="chat-Container">
                     {messages.map((message, index) => (
@@ -89,7 +89,7 @@ const LiveChat = ({ roomId }) => {
                     value={inputMessage}
                     onChange={(e) => setInputMessage(e.target.value)}
                     onKeyPress={handleKeyPress}  // Add the event listener here
-                    placeholder="Type a message..."
+                    placeholder="Add a comment..."
                 />
                 <button onClick={sendMessage}><FaRegPaperPlane /></button>
             </div>

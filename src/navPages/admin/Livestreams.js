@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Swal from "sweetalert2"; 
+import Swal from "sweetalert2";
 import "../newcss/style.css";
 import ReactPlayer from "react-player";
 import { MdOutlineContentCopy } from "react-icons/md";
@@ -94,7 +94,7 @@ const LiveStream = () => {
       });
   };
 
- 
+
 
   const toggleVideo = (eventId) => {
     setShowVideo(showVideo === eventId ? null : eventId);
@@ -153,7 +153,7 @@ const LiveStream = () => {
             duration: "00:00",
           });
           fetchEvents(); // Refresh events
-           setFormOn(!formOn);
+          setFormOn(!formOn);
         })
         .catch((error) => {
           Swal.fire("Error", error.message, "error");
@@ -221,9 +221,9 @@ const LiveStream = () => {
             <>
               <div>
                 <label>
-                <div style={{textAlign: 'center', marginBottom: '20px'}}>
-                                        Update the event below 
-                    </div>
+                  <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+                    Update the event below
+                  </div>
                   <input
                     type="text"
                     placeholder=" Cloudinary URL"
@@ -237,7 +237,7 @@ const LiveStream = () => {
               </div>
               <div>
                 <label>
-         
+
                   <input
                     type="text"
                     name="thumbnailUrl"
@@ -249,7 +249,7 @@ const LiveStream = () => {
                 </label>
               </div>
               <div>
-                <label> 
+                <label>
                   <input
                     type="hidden"
                     className="eventName"
@@ -265,9 +265,9 @@ const LiveStream = () => {
           ) : (
             <div>
               <label>
-                    <div style={{textAlign: 'center', marginBottom: '30px'}}>
-                                        create your event here 
-                    </div>
+                <div style={{ textAlign: 'center', marginBottom: '30px' }}>
+                  create your event here
+                </div>
                 <input
                   type="text"
                   name="eventName"
@@ -326,13 +326,13 @@ const LiveStream = () => {
                 color: "#fff",
               }}
             >
-           
 
-           <button onClick={() => handleDeleteEvent(event._id)} className="deleteButton">
-             
-           <BiTrash />
 
-           </button>
+              <button onClick={() => handleDeleteEvent(event._id)} className="deleteButton">
+
+                <BiTrash />
+
+              </button>
 
               {/* <button onClick={() => toggleMoreInfo(event._id)}>
                 {expandedEvent === event._id ? "Show Less" : "Show More"}
@@ -363,8 +363,8 @@ const LiveStream = () => {
                   </svg>
                 </div>
 
-                <div onClick={() => handleEditClick(event)} style={{display:'flex', alignItems: 'center', justifyContent: 'space-between'}}>
-                <div style={{marginRight:'10px'}}> {event.duration}</div>
+                <div onClick={() => handleEditClick(event)} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <div style={{ marginRight: '10px' }}> {event.duration}</div>
 
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -381,15 +381,15 @@ const LiveStream = () => {
               </div>
             </div>
             <p className="streaminKeys">
-            <span className="streamText">{event.streamingKey}</span>
-            <span className="copyIcon" onClick={() => handleCopy(event.streamingKey, event._id)}>
-             
-              {copiedEventId === event._id ? <AiOutlineCheck /> :  <MdOutlineContentCopy />}
-            </span>
-          </p>
+              <span className="streamText">{event.streamingKey}</span>
+              <span className="copyIcon" onClick={() => handleCopy(event.streamingKey, event._id)}>
 
-          {/* Display 'Copied' message and add 'coppiedAlert' class when the event has been copied */}
-    
+                {copiedEventId === event._id ? <AiOutlineCheck /> : <MdOutlineContentCopy />}
+              </span>
+            </p>
+
+            {/* Display 'Copied' message and add 'coppiedAlert' class when the event has been copied */}
+
             <h3>{event.eventName}</h3>
 
 
@@ -424,16 +424,16 @@ const LiveStream = () => {
         </div>
 
 
-  
+
       </div>
-              {/* Load More Button */}
-            {visibleEventsCount < events.length && (
-          <div style={{ textAlign: "center", marginTop: "20px" }}>
-            <button onClick={loadMoreEvents}>
-              {loading ? "Loading..." : "Load More"}
-            </button>
-          </div>
-        )}
+      {/* Load More Button */}
+      {visibleEventsCount < events.length && (
+        <div style={{ textAlign: "center", marginTop: "20px" }}>
+          <button onClick={loadMoreEvents}>
+            {loading ? "Loading..." : "Load More"}
+          </button>
+        </div>
+      )}
     </>
   );
 };

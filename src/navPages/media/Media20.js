@@ -1,8 +1,9 @@
 // import React, { useEffect, useState } from 'react';
 import Footer from '../../components/footer/Footer';
 import Navbar from '../../components/navbar/Navbar';
-import ImageGallery from './ImageGallery';
+import ImageGallery from './components/ImageGallery';
 import MediaList from './MediaList';
+import YoutubeSection from './components/YoutubeSection';
 import './media.css';
 
 
@@ -25,7 +26,7 @@ const Media20 = () => {
                             <a className="sm:-rotate-90 font-bold mt-2 mb-8 r gap-2 h-16 text-2xl leading-7" href="/#">
                                 <span>MEDIA</span>
                             </a>
-                            <a className="absolute h-20 bg-blue-500 w-20 flex items-center justify-center rounded-full bottom-10 left-10 text-white before:block before:absolute before:h-20 before:w-20 before:bg-sky-100 before:rounded-full group-hover:before:animate-ping before:-z-10 hover:bg-sky-600" href="/#">
+                            <a className="absolute h-20 bg-red-500 w-20 flex items-center justify-center rounded-full bottom-10 left-10 text-white before:block before:absolute before:h-20 before:w-20 before:bg-red-100 before:rounded-full group-hover:before:animate-ping before:-z-10 hover:bg-red-700" href="/#">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-8 h-8">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
                                 </svg>
@@ -39,39 +40,39 @@ const Media20 = () => {
                                 </p>
                                 <h3 className="mb-4 font-semibold text-xl text-gray-400">Explore Our Media Content</h3>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-between mb-3">
-                                    <a href="/#" className="flex items-center gap-3 hover:text-blue-300">
+                                    <a href="/media#" className="flex items-center gap-3 hover:text-blue-300">
                                         <span className="h-10 w-10 rounded-full bg-blue-300 flex items-center justify-center text-white shadow-lg shadow-blue-500/30">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
                                                 <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                                             </svg>
                                         </span>
-                                        <span className="font-semibold">Sermons</span>
+                                        <span className="font-semibold">Live</span>
                                     </a>
-                                    <a href="/#" className="flex items-center gap-3 hover:text-blue-300">
+                                    <a href="/media#" className="flex items-center gap-3 hover:text-blue-300">
                                         <span className="h-10 w-10 rounded-full bg-blue-300 flex items-center justify-center text-white shadow-lg shadow-blue-500/30">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
                                                 <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                                             </svg>
                                         </span>
-                                        <span className="font-semibold">Worship</span>
+                                        <span className="font-semibold">Videos</span>
                                     </a>
                                 </div>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-between mb-3">
-                                    <a href="/#" className="flex items-center gap-3 hover:text-blue-300">
+                                    <a href="/media#" className="flex items-center gap-3 hover:text-blue-300">
                                         <span className="h-10 w-10 rounded-full bg-blue-300 flex items-center justify-center text-white shadow-lg shadow-blue-500/30">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
                                                 <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                                             </svg>
                                         </span>
-                                        <span className="font-semibold">Prayers</span>
+                                        <span className="font-semibold">Shorts</span>
                                     </a>
-                                    <a href="/#" className="flex items-center gap-3 hover:text-blue-300">
+                                    <a href="/media#" className="flex items-center gap-3 hover:text-blue-300">
                                         <span className="h-10 w-10 rounded-full bg-blue-300 flex items-center justify-center text-white shadow-lg shadow-blue-500/30">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
                                                 <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                                             </svg>
                                         </span>
-                                        <span className="font-semibold">Events</span>
+                                        <span className="font-semibold">Community</span>
                                     </a>
                                 </div>
 
@@ -82,6 +83,9 @@ const Media20 = () => {
             </div>
 
             <MediaList />
+
+            <YoutubeSection />
+
             <ImageGallery />
 
             <section className="mx-6 my-14 md:mx-24">
